@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IESO 英语词汇系统</title>
+<title>高中英语词根记忆法</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -43,7 +43,6 @@ body{
   background:var(--bg);color:var(--text);min-height:100vh;
   transition:background 0.3s,color 0.3s;
 }
-/* 导航栏 */
 nav{
   position:fixed;top:0;left:0;right:0;height:var(--nav-height);
   background:rgba(245,245,247,0.8);backdrop-filter:blur(40px) saturate(150%);
@@ -59,7 +58,6 @@ nav .logo span{font-size:18px;}
 nav .nav-links{display:flex;gap:24px;margin-left:auto;align-items:center;}
 nav .nav-links a{font-size:12px;color:var(--text-secondary);text-decoration:none;font-weight:500;transition:color 0.2s;cursor:pointer;}
 nav .nav-links a:hover{color:var(--accent);}
-/* 主内容 */
 main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
 /* Hero区 */
 .hero{
@@ -80,7 +78,6 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
 .stats-bar .stat{text-align:center;}
 .stats-bar .stat .num{font-size:28px;font-weight:800;letter-spacing:-0.5px;background:linear-gradient(135deg,#0071e3,#40a9ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .stats-bar .stat .label{font-size:12px;color:var(--text-tertiary);font-weight:500;margin-top:2px;}
-/* 词根网格 */
 .section{padding:0 24px;max-width:960px;margin:0 auto;}
 .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
 .section-header h2{font-size:22px;font-weight:700;letter-spacing:-0.3px;}
@@ -105,7 +102,7 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
 .root-card .root{font-size:16px;font-weight:700;letter-spacing:-0.2px;margin-bottom:2px;}
 .root-card .meaning{font-size:12px;color:var(--text-secondary);font-weight:400;}
 .root-card .word-count{font-size:11px;color:var(--text-tertiary);margin-top:6px;font-weight:500;}
-/* 单词详情面板 */
+/* 单词详情面板 - 无TTS，纯音标展示 */
 .detail-panel{
   position:fixed;top:var(--nav-height);right:0;bottom:0;width:420px;
   background:var(--card-bg);backdrop-filter:blur(40px) saturate(150%);
@@ -132,23 +129,49 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
 .word-list{display:flex;flex-direction:column;gap:8px;}
 .word-item{
   background:rgba(255,255,255,0.5);border-radius:12px;padding:12px 14px;
-  transition:all 0.2s;cursor:pointer;
+  transition:all 0.2s;cursor:pointer;position:relative;
 }
 @media(prefers-color-scheme:dark){
   .word-item{background:rgba(255,255,255,0.04);}
 }
 .word-item:hover{background:rgba(0,113,227,0.06);}
-.word-item{position:relative;}
 .word-item .word{font-size:15px;font-weight:600;letter-spacing:-0.2px;}
-.word-item .phonetic{font-size:12px;color:var(--text-tertiary);margin-left:8px;font-weight:400;}
+.word-item .phonetic{
+  font-size:12px;color:var(--text-tertiary);margin-left:8px;font-weight:400;
+  font-family:'Inter','SF Pro','Menlo',monospace;letter-spacing:0.3px;
+}
+/* 音节拆分 - 替代TTS读音 */
+.word-item .syllables{
+  display:inline-block;font-size:11px;color:var(--text-tertiary);
+  margin-left:6px;font-weight:500;opacity:0.7;
+  font-family:'Inter','SF Pro','Menlo',monospace;
+}
 .word-item .meaning{font-size:13px;color:var(--text-secondary);margin-top:2px;}
 .word-item .example{font-size:12px;color:var(--text-tertiary);margin-top:4px;font-style:italic;padding-left:8px;border-left:2px solid var(--accent);}
-.word-item .play-btn{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;border:none;background:rgba(0,113,227,0.08);color:var(--accent);cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
-.word-item .play-btn:hover{background:rgba(0,113,227,0.2);transform:scale(1.1);}
+/* 音标展开区 - 替换原来的播放按钮 */
+.word-item .phonetic-toggle{
+  position:absolute;top:10px;right:10px;
+  font-size:16px;cursor:pointer;opacity:0.4;
+  transition:all 0.2s;user-select:none;
+  background:none;border:none;padding:4px;border-radius:6px;
+  line-height:1;
+}
+.word-item .phonetic-toggle:hover{opacity:1;background:rgba(0,113,227,0.08);transform:scale(1.1);}
+.word-item .phonetic-detail{
+  display:none;margin-top:6px;padding:6px 10px;
+  background:rgba(0,113,227,0.04);border-radius:8px;
+  font-size:12px;color:var(--text-secondary);line-height:1.6;
+  font-family:'Inter','SF Pro','Menlo',monospace;
+}
+.word-item .phonetic-detail.show{display:block;}
+.word-item .phonetic-detail .ipa{font-size:14px;font-weight:500;color:var(--accent);}
+.word-item .phonetic-detail .stress-guide{font-size:11px;color:var(--text-tertiary);margin-top:2px;}
+
 .freq-badge{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:4px;margin-left:6px;}
 .freq-high{background:rgba(255,69,58,0.1);color:#ff453a;}
 .freq-mid{background:rgba(255,159,10,0.1);color:#ff9f0a;}
 .freq-low{background:rgba(52,199,89,0.1);color:#34c759;}
+
 /* 思维导图 */
 .mindmap-section{
   max-width:960px;margin:40px auto;padding:0 24px;
@@ -161,6 +184,7 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
   padding:24px;box-shadow:var(--shadow);overflow:hidden;
 }
 #mindmap-svg{width:100%;height:400px;}
+
 /* 搜索 */
 .search-box{
   max-width:480px;margin:0 auto 32px;position:relative;
@@ -174,28 +198,30 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
 .search-box input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,113,227,0.15);}
 .search-box input::placeholder{color:var(--text-tertiary);}
 .search-box .icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--text-tertiary);}
+
 /* 底部 */
 footer{
   text-align:center;padding:40px 24px;color:var(--text-tertiary);font-size:12px;
 }
 footer a{color:var(--accent);text-decoration:none;}
+
 /* 遮罩 */
 .overlay{
   position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.2);
   backdrop-filter:blur(4px);z-index:49;display:none;
 }
 .overlay.show{display:block;}
-/* 空状态 */
+
 .empty-state{text-align:center;padding:40px;color:var(--text-tertiary);}
 .empty-state .icon{font-size:48px;margin-bottom:12px;}
-/* 滚动条 */
+
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.1);border-radius:4px;}
 @media(prefers-color-scheme:dark){
   ::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);}
 }
-/* 响应式 */
+
 @media(max-width:768px){
   .hero h1{font-size:32px;}
   .hero p{font-size:15px;}
@@ -209,7 +235,7 @@ footer a{color:var(--accent);text-decoration:none;}
 </head>
 <body>
 <nav>
-  <div class="logo"><span>📚</span> IESO 词汇</div>
+  <div class="logo"><span>📚</span> 词根记忆法</div>
   <div class="nav-links">
     <a onclick="scrollToSection('roots')">词根</a>
     <a onclick="scrollToSection('mindmap')">思维导图</a>
@@ -219,10 +245,13 @@ footer a{color:var(--accent);text-decoration:none;}
 
 <main>
   <div class="hero">
-    <div class="badge">📖 高中英语 3500 词汇</div>
-    <h1>单词有<span>根</span>，<br>记忆有<span>方</span></h1>
-    <p>基于词根联想记忆法，将3500个高中词汇重组为100+词根体系。理解一个词根，掌握一群单词。</p>
-    <div class="stats-bar" id="stats-bar"></div>
+    <div class="badge">📖 高中英语词根记忆法</div>
+    <h1>词有<span>根</span>，<br>记有<span>方</span></h1>
+    <p>基于词根联想记忆法，将高中词汇重组为词根体系。理解一个词根，掌握一群单词。</p>
+    <div class="stats-bar" id="stats-bar">
+      <div class="stat"><div class="num" id="root-count-num">0</div><div class="label">词根</div></div>
+      <div class="stat"><div class="num" id="word-count-num">0</div><div class="label">词汇</div></div>
+    </div>
   </div>
 
   <div class="search-box">
@@ -233,7 +262,7 @@ footer a{color:var(--accent);text-decoration:none;}
   <div class="section" id="roots">
     <div class="section-header">
       <h2>📦 词根</h2>
-      <span class="count" id="root-count"></span>
+      <span class="count" id="root-count">共 0 个词根</span>
     </div>
     <div class="root-grid" id="root-grid"></div>
   </div>
@@ -255,7 +284,7 @@ footer a{color:var(--accent);text-decoration:none;}
 </div>
 
 <footer>
-  IESO 英语词汇系统 · 基于教育部高中英语课程标准 · <a href="https://github.com/wangdwn/ieso-vocab" target="_blank">GitHub</a>
+  高中英语词根记忆法 · 基于教育部高中英语课程标准 · <a href="https://github.com/wangdwn/ieso-vocab" target="_blank">GitHub</a>
 </footer>
 
 <script>
@@ -277,16 +306,11 @@ function init() {
   const roots = vocabData.roots;
   const rootKeys = Object.keys(roots);
   
-  // 统计
   let totalWords = 0;
   rootKeys.forEach(k => totalWords += roots[k].words.length);
   
-  document.getElementById('stats-bar').innerHTML = [
-    '<div class="stat"><div class="num">'+rootKeys.length+'</div><div class="label">词根</div></div>',
-    '<div class="stat"><div class="num">'+totalWords+'</div><div class="label">词汇</div></div>',
-    '<div class="stat"><div class="num">'+Object.keys(vocabData.metadata||{}).length+'</div><div class="label">版本</div></div>'
-  ].join('');
-  
+  document.getElementById('root-count-num').textContent = rootKeys.length;
+  document.getElementById('word-count-num').textContent = totalWords;
   document.getElementById('root-count').textContent = '共 ' + rootKeys.length + ' 个词根';
   
   // 渲染词根网格
@@ -301,11 +325,10 @@ function init() {
       '<div class="word-count">'+root.words.length+' 个单词</div></div>';
   }).join('');
   
-  // 渲染思维导图
   renderMindmap(rootKeys, roots);
 }
 
-// ===== 显示词根详情 =====
+// ===== 显示词根详情（无TTS，音标展示） =====
 function showRoot(key) {
   const root = vocabData.roots[key];
   if(!root) return;
@@ -317,31 +340,58 @@ function showRoot(key) {
     '<div class="root-meaning">'+root.meaning+'</div>';
   
   const freqMap = {high:'高频', mid:'中频', low:'低频'};
-  document.getElementById('word-list').innerHTML = root.words.map(w =>
-    '<div class="word-item">' +
-      '<button class="play-btn" onclick="event.stopPropagation();speak(\''+w.word+'\')">▶</button>' +
-      '<div><span class="word">'+w.word+'</span><span class="phonetic">'+w.phonetic+'</span><span class="freq-badge freq-'+w.freq+'">'+freqMap[w.freq]+'</span></div>' +
+  document.getElementById('word-list').innerHTML = root.words.map((w, idx) => {
+    // 生成音节拆分（规则：按音标中的元音分组）
+    const syl = getSyllables(w.word, w.phonetic);
+    return '<div class="word-item" onclick="togglePhonetic('+idx+')">' +
+      '<button class="phonetic-toggle" onclick="event.stopPropagation();togglePhonetic('+idx+')">📢</button>' +
+      '<div><span class="word">'+w.word+'</span>' +
+      '<span class="phonetic">'+w.phonetic+'</span>' +
+      (syl ? '<span class="syllables">·'+syl+'·</span>' : '') +
+      '<span class="freq-badge freq-'+w.freq+'">'+freqMap[w.freq]+'</span></div>' +
       '<div class="meaning">'+w.meaning+'</div>' +
       (w.example ? '<div class="example">'+w.example+'</div>' : '') +
-    '</div>'
-  ).join('');
+      '<div class="phonetic-detail" id="pd-'+idx+'">' +
+        '<div class="ipa">/'+w.phonetic.replace(/[\/]/g,'')+'/</div>' +
+        '<div class="stress-guide">'+getStressGuide(w.phonetic)+'</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
   
   document.getElementById('detail-panel').classList.add('open');
   document.getElementById('overlay').classList.add('show');
 }
 
-function closePanel() {
-  document.getElementById('detail-panel').classList.remove('open');
-  document.getElementById('overlay').classList.remove('show');
+// ===== 音标展开/折叠（替代TTS播放） =====
+function togglePhonetic(idx) {
+  const el = document.getElementById('pd-'+idx);
+  if(el) el.classList.toggle('show');
+}
+
+// ===== 音节拆分（简单规则） =====
+function getSyllables(word, phonetic) {
+  if(!word || !phonetic) return '';
+  // 按元音音标分组近似
+  const vowels = word.match(/[aeiouy]+/gi);
+  if(!vowels || vowels.length <= 1) return '';
+  // 简单规则：从辅音处拆分
+  return word.toLowerCase().replace(/([^aeiouy]+)(?=[aeiouy])/g, '$1·').replace(/^·|·$/g,'');
+}
+
+// ===== 重音提示 =====
+function getStressGuide(phonetic) {
+  if(!phonetic) return '';
+  if(phonetic.includes('ˈ')) return '🔴 主重音在此音节，读得最重最长';
+  if(phonetic.includes('ˌ')) return '🟠 次重音在此音节';
+  return '⚪ 无特别重音，自然发音即可';
 }
 
 // ===== 搜索 =====
 function searchWords(query) {
   if(!vocabData || !query.trim()) {
-    // 重置显示所有词根
-    const grid = document.getElementById('root-grid');
     const roots = vocabData.roots;
     const rootKeys = Object.keys(roots);
+    const grid = document.getElementById('root-grid');
     const emojis = ['📦','🔤','📖','🎯','🧩','💡','🔗','🌱','⚡','🎓','📝','🔄','🌟','🔑','💎','📌','🎨','🧠','📊','🎵'];
     grid.innerHTML = rootKeys.map((key, i) => {
       const root = roots[key];
@@ -383,7 +433,8 @@ function searchWords(query) {
   
   grid.innerHTML = keys.map((key, i) => {
     const root = matched[key];
-    return '<div class="root-card" onclick="showRoot(\''+key+'\')" style="'+(root.words.length>0&&root.words!==vocabData.roots[key]?.words?'border-color:var(--accent)':'')+'">' +
+    return '<div class="root-card" onclick="showRoot(\''+key+'\')"' +
+      (root.words.length>0 && root.words!==vocabData.roots[key]?.words ? ' style="border-color:var(--accent)"' : '') + '>' +
       '<span class="emoji">'+emojis[i%emojis.length]+'</span>' +
       '<div class="root">'+key+'</div>' +
       '<div class="meaning">'+root.meaning+'</div>' +
@@ -433,66 +484,20 @@ function renderMindmap(keys, roots) {
   svg.innerHTML = html;
 }
 
-// ===== 滚动到区块 =====
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
 
-// ===== 深色模式切换 =====
+// ===== 深色模式 =====
 function toggleDark() {
-  // 触发系统深色模式 - 用一个隐藏的meta切换
-  document.body.style.transition = 'background 0.3s';
-  // 简单实现: 强制切换类
   const html = document.documentElement;
   const current = html.getAttribute('data-theme');
   html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
 }
 
-// ===== TTS 读音 =====
-// 利用首次点击激活音频上下文，绕过浏览器自动播放限制
-let audioActivated = false;
-document.addEventListener('click', function() {
-  if(!audioActivated) {
-    audioActivated = true;
-    // 播放一段静音来激活音频通道
-    try {
-      const ctx = new (window.AudioContext || window.webkitAudioContext)();
-      const buf = ctx.createBuffer(1, 1, 22050);
-      const src = ctx.createBufferSource();
-      src.buffer = buf;
-      src.connect(ctx.destination);
-      src.start();
-    } catch(e) {}
-  }
-}, {once: true});
-
-function speak(text) {
-  if(!text) return;
-  // 创建audio元素来播放
-  const audio = document.createElement('audio');
-  audio.style.display = 'none';
-  audio.controls = false;
-  audio.src = 'https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=en&client=gtx&q=' + encodeURIComponent(text.substring(0, 100));
-  document.body.appendChild(audio);
-  audio.play().then(function() {
-    audio.onended = function() { document.body.removeChild(audio); };
-  }).catch(function(err) {
-    document.body.removeChild(audio);
-    console.warn('TTS blocked:', err);
-    // 终极降级：用Web Speech API
-    if(window.speechSynthesis) {
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'en-US'; u.rate = 0.85;
-      window.speechSynthesis.speak(u);
-    }
-  });
-}
-
 // ===== 启动 =====
 loadData();
 
-// 键盘快捷键
 document.addEventListener('keydown', e => {
   if(e.key === 'Escape') closePanel();
   if(e.ctrlKey && e.key === 'k') { e.preventDefault(); document.getElementById('search-input').focus(); }
