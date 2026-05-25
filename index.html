@@ -138,10 +138,13 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
   .word-item{background:rgba(255,255,255,0.04);}
 }
 .word-item:hover{background:rgba(0,113,227,0.06);}
+.word-item{position:relative;}
 .word-item .word{font-size:15px;font-weight:600;letter-spacing:-0.2px;}
 .word-item .phonetic{font-size:12px;color:var(--text-tertiary);margin-left:8px;font-weight:400;}
 .word-item .meaning{font-size:13px;color:var(--text-secondary);margin-top:2px;}
 .word-item .example{font-size:12px;color:var(--text-tertiary);margin-top:4px;font-style:italic;padding-left:8px;border-left:2px solid var(--accent);}
+.word-item .play-btn{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;border:none;background:rgba(0,113,227,0.08);color:var(--accent);cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+.word-item .play-btn:hover{background:rgba(0,113,227,0.2);transform:scale(1.1);}
 .freq-badge{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:4px;margin-left:6px;}
 .freq-high{background:rgba(255,69,58,0.1);color:#ff453a;}
 .freq-mid{background:rgba(255,159,10,0.1);color:#ff9f0a;}
@@ -316,6 +319,7 @@ function showRoot(key) {
   const freqMap = {high:'高频', mid:'中频', low:'低频'};
   document.getElementById('word-list').innerHTML = root.words.map(w =>
     '<div class="word-item">' +
+      '<button class="play-btn" onclick="event.stopPropagation();speak(\''+w.word+'\')">▶</button>' +
       '<div><span class="word">'+w.word+'</span><span class="phonetic">'+w.phonetic+'</span><span class="freq-badge freq-'+w.freq+'">'+freqMap[w.freq]+'</span></div>' +
       '<div class="meaning">'+w.meaning+'</div>' +
       (w.example ? '<div class="example">'+w.example+'</div>' : '') +
@@ -442,6 +446,15 @@ function toggleDark() {
   const html = document.documentElement;
   const current = html.getAttribute('data-theme');
   html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+}
+
+// ===== TTS 读音 =====
+function speak(text) {
+  if(!window.speechSynthesis) { alert('浏览器不支持语音'); return; }
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US'; u.rate = 0.85; u.pitch = 1;
+  window.speechSynthesis.speak(u);
 }
 
 // ===== 启动 =====
