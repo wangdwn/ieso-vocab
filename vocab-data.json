@@ -10,212 +10,4182 @@
     "port": {
       "meaning": "港口、搬运、运送",
       "words": [
-        { "word": "port", "phonetic": "/pɔːrt/", "meaning": "港口；左舷", "freq": "high", "example": "The ship arrived at the port." },
-        { "word": "airport", "phonetic": "/ˈeərpɔːrt/", "meaning": "机场", "freq": "high", "example": "I went to the airport." },
-        { "word": "import", "phonetic": "/ɪmˈpɔːrt/", "meaning": "进口；输入", "freq": "high", "example": "China imports oil." },
-        { "word": "export", "phonetic": "/ˈekspɔːrt/", "meaning": "出口；输出", "freq": "high", "example": "The country exports cars." },
-        { "word": "transport", "phonetic": "/ˈtrænspɔːrt/", "meaning": "运输；交通", "freq": "high", "example": "Transport is important." },
-        { "word": "report", "phonetic": "/rɪˈpɔːrt/", "meaning": "报告；举报", "freq": "high", "example": "Report the accident." },
-        { "word": "support", "phonetic": "/səˈpɔːrt/", "meaning": "支持；支撑", "freq": "high", "example": "I support you." },
-        { "word": "deport", "phonetic": "/dɪˈpɔːrt/", "meaning": "驱逐；遣返", "freq": "mid", "example": "The criminal was deported." },
-        { "word": "passport", "phonetic": "/ˈpɑːspɔːrt/", "meaning": "护照", "freq": "high", "example": "Bring your passport." },
-        { "word": "porter", "phonetic": "/ˈpɔːrtər/", "meaning": "搬运工；门卫", "freq": "mid", "example": "The porter helped carry bags." }
+        {
+          "word": "port",
+          "phonetic": "/pɔːrt/",
+          "meaning": "港口；左舷",
+          "freq": "high",
+          "example": "The ship arrived at the port."
+        },
+        {
+          "word": "airport",
+          "phonetic": "/ˈeərpɔːrt/",
+          "meaning": "机场",
+          "freq": "high",
+          "example": "I went to the airport."
+        },
+        {
+          "word": "import",
+          "phonetic": "/ɪmˈpɔːrt/",
+          "meaning": "进口；输入",
+          "freq": "high",
+          "example": "China imports oil."
+        },
+        {
+          "word": "export",
+          "phonetic": "/ˈekspɔːrt/",
+          "meaning": "出口；输出",
+          "freq": "high",
+          "example": "The country exports cars."
+        },
+        {
+          "word": "transport",
+          "phonetic": "/ˈtrænspɔːrt/",
+          "meaning": "运输；交通",
+          "freq": "high",
+          "example": "Transport is important."
+        },
+        {
+          "word": "report",
+          "phonetic": "/rɪˈpɔːrt/",
+          "meaning": "报告；举报",
+          "freq": "high",
+          "example": "Report the accident."
+        },
+        {
+          "word": "support",
+          "phonetic": "/səˈpɔːrt/",
+          "meaning": "支持；支撑",
+          "freq": "high",
+          "example": "I support you."
+        },
+        {
+          "word": "deport",
+          "phonetic": "/dɪˈpɔːrt/",
+          "meaning": "驱逐；遣返",
+          "freq": "mid",
+          "example": "The criminal was deported."
+        },
+        {
+          "word": "passport",
+          "phonetic": "/ˈpɑːspɔːrt/",
+          "meaning": "护照",
+          "freq": "high",
+          "example": "Bring your passport."
+        },
+        {
+          "word": "porter",
+          "phonetic": "/ˈpɔːrtər/",
+          "meaning": "搬运工；门卫",
+          "freq": "mid",
+          "example": "The porter helped carry bags."
+        },
+        {
+          "word": "portable",
+          "phonetic": "/ˈpɔːrtəbl/",
+          "meaning": "便携的",
+          "freq": "low",
+          "example": "This device is portable."
+        },
+        {
+          "word": "portfolio",
+          "phonetic": "/pɔːrtˈfoʊlioʊ/",
+          "meaning": "文件夹",
+          "freq": "mid",
+          "example": "She showed her portfolio."
+        },
+        {
+          "word": "porch",
+          "phonetic": "/pɔːrtʃ/",
+          "meaning": "门廊",
+          "freq": "mid",
+          "example": "We sat on the porch."
+        },
+        {
+          "word": "deportation",
+          "phonetic": "/ˌdiːpɔːrˈteɪʃn/",
+          "meaning": "驱逐",
+          "freq": "low",
+          "example": "Deportation orders were issued."
+        },
+        {
+          "word": "exportation",
+          "phonetic": "/ˌekspɔːrˈteɪʃn/",
+          "meaning": "出口",
+          "freq": "mid",
+          "example": "Exportation of goods increased."
+        },
+        {
+          "word": "importation",
+          "phonetic": "/ˌɪmpɔːrˈteɪʃn/",
+          "meaning": "进口",
+          "freq": "mid",
+          "example": "Importation is controlled."
+        },
+        {
+          "word": "transportation",
+          "phonetic": "/ˌtrænspɔːrˈteɪʃn/",
+          "meaning": "运输",
+          "freq": "high",
+          "example": "Transportation is key."
+        },
+        {
+          "word": "teleport",
+          "phonetic": "/ˈtelɪpɔːrt/",
+          "meaning": "传送",
+          "freq": "low",
+          "example": "Science fiction often features teleportation."
+        },
+        {
+          "word": "seaport",
+          "phonetic": "/ˈsiːpɔːrt/",
+          "meaning": "海港",
+          "freq": "mid",
+          "example": "The seaport is busy."
+        },
+        {
+          "word": "reporter",
+          "phonetic": "/rɪˈpɔːrtər/",
+          "meaning": "记者",
+          "freq": "high",
+          "example": "The reporter asked questions."
+        },
+        {
+          "word": "supporter",
+          "phonetic": "/səˈpɔːrtər/",
+          "meaning": "支持者",
+          "freq": "mid",
+          "example": "He is a loyal supporter."
+        },
+        {
+          "word": "supportive",
+          "phonetic": "/səˈpɔːrtɪv/",
+          "meaning": "支持的",
+          "freq": "mid",
+          "example": "She is very supportive."
+        },
+        {
+          "word": "sport",
+          "phonetic": "/spɔːrt/",
+          "meaning": "运动",
+          "freq": "high",
+          "example": "I love sports."
+        },
+        {
+          "word": "sportsman",
+          "phonetic": "/ˈspɔːrtsmən/",
+          "meaning": "运动员",
+          "freq": "mid",
+          "example": "He is a great sportsman."
+        },
+        {
+          "word": "sportswoman",
+          "phonetic": "/ˈspɔːrtswʊmən/",
+          "meaning": "女运动员",
+          "freq": "mid",
+          "example": "She is an excellent sportswoman."
+        },
+        {
+          "word": "sporting",
+          "phonetic": "/ˈspɔːrtɪŋ/",
+          "meaning": "运动的",
+          "freq": "mid",
+          "example": "He has a sporting spirit."
+        },
+        {
+          "word": "sporty",
+          "phonetic": "/ˈspɔːrti/",
+          "meaning": "运动型的",
+          "freq": "mid",
+          "example": "She is very sporty."
+        },
+        {
+          "word": "opportunity",
+          "phonetic": "/ˌɑːpərˈtuːnəti/",
+          "meaning": "机会",
+          "freq": "high",
+          "example": "This is a great opportunity."
+        },
+        {
+          "word": "opportune",
+          "phonetic": "/ˌɑːpərˈtuːn/",
+          "meaning": "及时的",
+          "freq": "low",
+          "example": "The timing was opportune."
+        },
+        {
+          "word": "importer",
+          "phonetic": "进口商",
+          "meaning": "/ɪmˈpɔːrtər/",
+          "freq": "mid",
+          "example": "The importer paid tariffs."
+        },
+        {
+          "word": "sportive",
+          "phonetic": "/sportive/",
+          "meaning": "sportive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "importune",
+          "phonetic": "/importune/",
+          "meaning": "importune",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "dict": {
       "meaning": "说话、讲述、指示",
       "words": [
-        { "word": "dictionary", "phonetic": "/ˈdɪkʃəneri/", "meaning": "字典", "freq": "high", "example": "Look it up in the dictionary." },
-        { "word": "dictate", "phonetic": "/dɪkˈteɪt/", "meaning": "听写；命令", "freq": "mid", "example": "The teacher dictated sentences." },
-        { "word": "predict", "phonetic": "/prɪˈdɪkt/", "meaning": "预测；预言", "freq": "high", "example": "Nobody can predict the future." },
-        { "word": "contradict", "phonetic": "/ˌkɒntrəˈdɪkt/", "meaning": "反驳；矛盾", "freq": "mid", "example": "The evidence contradicts his statement." },
-        { "word": "verdict", "phonetic": "/ˈvɜːrdɪkt/", "meaning": "判决；结论", "freq": "mid", "example": "The jury returned a guilty verdict." },
-        { "word": "indict", "phonetic": "/ɪnˈdaɪt/", "meaning": "起诉；控告", "freq": "mid", "example": "He was indicted for fraud." }
+        {
+          "word": "dictionary",
+          "phonetic": "/ˈdɪkʃəneri/",
+          "meaning": "字典",
+          "freq": "high",
+          "example": "Look it up in the dictionary."
+        },
+        {
+          "word": "dictate",
+          "phonetic": "/dɪkˈteɪt/",
+          "meaning": "听写；命令",
+          "freq": "mid",
+          "example": "The teacher dictated sentences."
+        },
+        {
+          "word": "predict",
+          "phonetic": "/prɪˈdɪkt/",
+          "meaning": "预测；预言",
+          "freq": "high",
+          "example": "Nobody can predict the future."
+        },
+        {
+          "word": "contradict",
+          "phonetic": "/ˌkɒntrəˈdɪkt/",
+          "meaning": "反驳；矛盾",
+          "freq": "mid",
+          "example": "The evidence contradicts his statement."
+        },
+        {
+          "word": "verdict",
+          "phonetic": "/ˈvɜːrdɪkt/",
+          "meaning": "判决；结论",
+          "freq": "mid",
+          "example": "The jury returned a guilty verdict."
+        },
+        {
+          "word": "indict",
+          "phonetic": "/ɪnˈdaɪt/",
+          "meaning": "起诉；控告",
+          "freq": "mid",
+          "example": "He was indicted for fraud."
+        },
+        {
+          "word": "dictation",
+          "phonetic": "/dɪkˈteɪʃn/",
+          "meaning": "听写",
+          "freq": "mid",
+          "example": "We have dictation today."
+        },
+        {
+          "word": "dictator",
+          "phonetic": "/dɪkˈteɪtər/",
+          "meaning": "独裁者",
+          "freq": "low",
+          "example": "The dictator ruled ruthlessly."
+        },
+        {
+          "word": "dictatorship",
+          "phonetic": "/dɪkˈteɪtərʃɪp/",
+          "meaning": "独裁",
+          "freq": "low",
+          "example": "The country was under dictatorship."
+        },
+        {
+          "word": "prediction",
+          "phonetic": "/prɪˈdɪkʃn/",
+          "meaning": "预言",
+          "freq": "mid",
+          "example": "His prediction came true."
+        },
+        {
+          "word": "predictable",
+          "phonetic": "/prɪˈdɪktəbl/",
+          "meaning": "可预测的",
+          "freq": "mid",
+          "example": "The result was predictable."
+        },
+        {
+          "word": "predictably",
+          "phonetic": "/prɪˈdɪktəbli/",
+          "meaning": "可预测地",
+          "freq": "mid",
+          "example": "Predictably, he was late."
+        },
+        {
+          "word": "predictive",
+          "phonetic": "/prɪˈdɪktɪv/",
+          "meaning": "预测性的",
+          "freq": "low",
+          "example": "Predictive analytics is useful."
+        },
+        {
+          "word": "contradiction",
+          "phonetic": "/ˌkɑːntrəˈdɪkʃn/",
+          "meaning": "矛盾",
+          "freq": "mid",
+          "example": "There is a contradiction here."
+        },
+        {
+          "word": "contradictory",
+          "phonetic": "/ˌkɑːntrəˈdɪktəri/",
+          "meaning": "矛盾的",
+          "freq": "mid",
+          "example": "The statements are contradictory."
+        },
+        {
+          "word": "addict",
+          "phonetic": "/əˈdɪkt/",
+          "meaning": "上瘾者",
+          "freq": "mid",
+          "example": "He is a drug addict."
+        },
+        {
+          "word": "addiction",
+          "phonetic": "/əˈdɪkʃn/",
+          "meaning": "上瘾",
+          "freq": "mid",
+          "example": "Addiction is hard to overcome."
+        },
+        {
+          "word": "addictive",
+          "phonetic": "/əˈdɪktɪv/",
+          "meaning": "上瘾的",
+          "freq": "mid",
+          "example": "This game is addictive."
+        },
+        {
+          "word": "edict",
+          "phonetic": "/ˈiːdɪkt/",
+          "meaning": "法令",
+          "freq": "low",
+          "example": "The king issued an edict."
+        },
+        {
+          "word": "indictment",
+          "phonetic": "/ɪnˈdaɪtmənt/",
+          "meaning": "起诉书",
+          "freq": "low",
+          "example": "The indictment was read."
+        },
+        {
+          "word": "benediction",
+          "phonetic": "/ˌbenɪˈdɪkʃn/",
+          "meaning": "祝福",
+          "freq": "low",
+          "example": "The priest gave a benediction."
+        },
+        {
+          "word": "malediction",
+          "phonetic": "/ˌmælɪˈdɪkʃn/",
+          "meaning": "诅咒",
+          "freq": "low",
+          "example": "The witch uttered a malediction."
+        },
+        {
+          "word": "jurisdiction",
+          "phonetic": "/ˌdʒʊrɪsˈdɪkʃn/",
+          "meaning": "司法权",
+          "freq": "low",
+          "example": "The court has jurisdiction."
+        },
+        {
+          "word": "diction",
+          "phonetic": "/ˈdɪkʃn/",
+          "meaning": "措辞",
+          "freq": "low",
+          "example": "His diction is clear."
+        },
+        {
+          "word": "addicted",
+          "phonetic": "上瘾的",
+          "meaning": "/əˈdɪktɪd/",
+          "freq": "mid",
+          "example": "He is addicted to games."
+        },
+        {
+          "word": "interdict",
+          "phonetic": "/interdict/",
+          "meaning": "interdict",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "aud": {
       "meaning": "听、声音、听觉",
       "words": [
-        { "word": "audio", "phonetic": "/ˈɔːdioʊ/", "meaning": "音频的", "freq": "high", "example": "The audio quality is excellent." },
-        { "word": "audience", "phonetic": "/ˈɔːdiəns/", "meaning": "观众；听众", "freq": "high", "example": "The audience applauded." },
-        { "word": "audible", "phonetic": "/ˈɔːdəbl/", "meaning": "可听见的", "freq": "mid", "example": "His voice was barely audible." },
-        { "word": "audit", "phonetic": "/ˈɔːdɪt/", "meaning": "审计；旁听", "freq": "mid", "example": "The accounts were audited." },
-        { "word": "audition", "phonetic": "/ɔːˈdɪʃn/", "meaning": "试镜；听觉", "freq": "high", "example": "She auditioned for the play." }
+        {
+          "word": "audio",
+          "phonetic": "/ˈɔːdioʊ/",
+          "meaning": "音频的",
+          "freq": "high",
+          "example": "The audio quality is excellent."
+        },
+        {
+          "word": "audience",
+          "phonetic": "/ˈɔːdiəns/",
+          "meaning": "观众；听众",
+          "freq": "high",
+          "example": "The audience applauded."
+        },
+        {
+          "word": "audible",
+          "phonetic": "/ˈɔːdəbl/",
+          "meaning": "可听见的",
+          "freq": "mid",
+          "example": "His voice was barely audible."
+        },
+        {
+          "word": "audit",
+          "phonetic": "/ˈɔːdɪt/",
+          "meaning": "审计；旁听",
+          "freq": "mid",
+          "example": "The accounts were audited."
+        },
+        {
+          "word": "audition",
+          "phonetic": "/ɔːˈdɪʃn/",
+          "meaning": "试镜；听觉",
+          "freq": "high",
+          "example": "She auditioned for the play."
+        },
+        {
+          "word": "auditor",
+          "phonetic": "/ˈɔːdɪtər/",
+          "meaning": "审计员",
+          "freq": "mid",
+          "example": "The auditor checked the books."
+        },
+        {
+          "word": "auditory",
+          "phonetic": "/ˈɔːdətɔːri/",
+          "meaning": "听觉的",
+          "freq": "low",
+          "example": "Auditory processing is important."
+        },
+        {
+          "word": "auditorium",
+          "phonetic": "/ˌɔːdɪˈtɔːriəm/",
+          "meaning": "礼堂",
+          "freq": "mid",
+          "example": "The auditorium was full."
+        },
+        {
+          "word": "inaudible",
+          "phonetic": "/ɪnˈɔːdəbl/",
+          "meaning": "听不见的",
+          "freq": "mid",
+          "example": "His voice was inaudible."
+        },
+        {
+          "word": "audiobook",
+          "phonetic": "/ˈɔːdioʊbʊk/",
+          "meaning": "有声书",
+          "freq": "mid",
+          "example": "I listen to audiobooks."
+        },
+        {
+          "word": "audiovisual",
+          "phonetic": "/ˌɔːdioʊˈvɪʒuəl/",
+          "meaning": "视听的",
+          "freq": "mid",
+          "example": "Audiovisual equipment is needed."
+        },
+        {
+          "word": "auditory",
+          "phonetic": "/ˈɔːdətɔːri/",
+          "meaning": "听觉的",
+          "freq": "low",
+          "example": "Auditory skills develop early."
+        },
+        {
+          "word": "audiology",
+          "phonetic": "/ˌɔːdiˈɑːlədʒi/",
+          "meaning": "听力学",
+          "freq": "low",
+          "example": "She studies audiology."
+        }
       ]
     },
     "vis": {
       "meaning": "看、视觉、视力",
       "words": [
-        { "word": "visit", "phonetic": "/ˈvɪzɪt/", "meaning": "访问；参观", "freq": "high", "example": "I visit my grandmother weekly." },
-        { "word": "vision", "phonetic": "/ˈvɪʒn/", "meaning": "视觉；愿景", "freq": "high", "example": "His vision is clear." },
-        { "word": "visible", "phonetic": "/ˈvɪzəbl/", "meaning": "可见的；明显的", "freq": "high", "example": "The stars are visible." },
-        { "word": "visualize", "phonetic": "/ˈvɪʒuəlaɪz/", "meaning": "想象；可视化", "freq": "high", "example": "Visualize your success." },
-        { "word": "revision", "phonetic": "/rɪˈvɪʒn/", "meaning": "修订；复习", "freq": "high", "example": "Do a revision of your essay." },
-        { "word": "television", "phonetic": "/ˈtelɪvɪʒn/", "meaning": "电视", "freq": "high", "example": "I watch television every evening." }
+        {
+          "word": "visit",
+          "phonetic": "/ˈvɪzɪt/",
+          "meaning": "访问；参观",
+          "freq": "high",
+          "example": "I visit my grandmother weekly."
+        },
+        {
+          "word": "vision",
+          "phonetic": "/ˈvɪʒn/",
+          "meaning": "视觉；愿景",
+          "freq": "high",
+          "example": "His vision is clear."
+        },
+        {
+          "word": "visible",
+          "phonetic": "/ˈvɪzəbl/",
+          "meaning": "可见的；明显的",
+          "freq": "high",
+          "example": "The stars are visible."
+        },
+        {
+          "word": "visualize",
+          "phonetic": "/ˈvɪʒuəlaɪz/",
+          "meaning": "想象；可视化",
+          "freq": "high",
+          "example": "Visualize your success."
+        },
+        {
+          "word": "revision",
+          "phonetic": "/rɪˈvɪʒn/",
+          "meaning": "修订；复习",
+          "freq": "high",
+          "example": "Do a revision of your essay."
+        },
+        {
+          "word": "television",
+          "phonetic": "/ˈtelɪvɪʒn/",
+          "meaning": "电视",
+          "freq": "high",
+          "example": "I watch television every evening."
+        },
+        {
+          "word": "visual",
+          "phonetic": "/ˈvɪʒuəl/",
+          "meaning": "视觉的",
+          "freq": "high",
+          "example": "Visual aids help learning."
+        },
+        {
+          "word": "visually",
+          "phonetic": "/ˈvɪʒuəli/",
+          "meaning": "视觉上",
+          "freq": "mid",
+          "example": "It is visually appealing."
+        },
+        {
+          "word": "visitor",
+          "phonetic": "/ˈvɪzɪtər/",
+          "meaning": "访客",
+          "freq": "high",
+          "example": "We have a visitor."
+        },
+        {
+          "word": "invisible",
+          "phonetic": "/ɪnˈvɪzəbl/",
+          "meaning": "看不见的",
+          "freq": "mid",
+          "example": "The air is invisible."
+        },
+        {
+          "word": "visibility",
+          "phonetic": "/ˌvɪzəˈbɪləti/",
+          "meaning": "能见度",
+          "freq": "mid",
+          "example": "Visibility is poor today."
+        },
+        {
+          "word": "advise",
+          "phonetic": "/ədˈvaɪz/",
+          "meaning": "建议",
+          "freq": "high",
+          "example": "I advise you to study."
+        },
+        {
+          "word": "advice",
+          "phonetic": "/ədˈvaɪs/",
+          "meaning": "建议",
+          "freq": "high",
+          "example": "Take my advice."
+        },
+        {
+          "word": "adviser",
+          "phonetic": "/ədˈvaɪzər/",
+          "meaning": "顾问",
+          "freq": "mid",
+          "example": "He is my adviser."
+        },
+        {
+          "word": "advisory",
+          "phonetic": "/ədˈvaɪzəri/",
+          "meaning": "顾问的",
+          "freq": "mid",
+          "example": "The advisory committee met."
+        },
+        {
+          "word": "revise",
+          "phonetic": "/rɪˈvaɪz/",
+          "meaning": "修订",
+          "freq": "high",
+          "example": "I need to revise my notes."
+        },
+        {
+          "word": "supervise",
+          "phonetic": "/ˈsuːpərvaɪz/",
+          "meaning": "监督",
+          "freq": "mid",
+          "example": "She supervises the team."
+        },
+        {
+          "word": "supervisor",
+          "phonetic": "/ˈsuːpərvaɪzər/",
+          "meaning": "主管",
+          "freq": "mid",
+          "example": "My supervisor is helpful."
+        },
+        {
+          "word": "supervision",
+          "phonetic": "/ˌsuːpərˈvɪʒn/",
+          "meaning": "监督",
+          "freq": "mid",
+          "example": "Under close supervision."
+        },
+        {
+          "word": "previse",
+          "phonetic": "/prɪˈvaɪz/",
+          "meaning": "预见",
+          "freq": "low",
+          "example": "He prevised the outcome."
+        },
+        {
+          "word": "envision",
+          "phonetic": "/ɪnˈvɪʒn/",
+          "meaning": "想象",
+          "freq": "mid",
+          "example": "I envision a bright future."
+        },
+        {
+          "word": "visualization",
+          "phonetic": "/ˌvɪʒuəlɪˈzeɪʃn/",
+          "meaning": "可视化",
+          "freq": "mid",
+          "example": "Data visualization is useful."
+        },
+        {
+          "word": "revisory",
+          "phonetic": "/revisory/",
+          "meaning": "revisory",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "televise",
+          "phonetic": "/televise/",
+          "meaning": "televise",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "scrib": {
       "meaning": "写、描述、书写",
       "words": [
-        { "word": "describe", "phonetic": "/dɪˈskraɪb/", "meaning": "描述；说明", "freq": "high", "example": "Describe the accident." },
-        { "word": "script", "phonetic": "/skrɪpt/", "meaning": "脚本；手稿", "freq": "high", "example": "Read the script carefully." },
-        { "word": "prescription", "phonetic": "/prɪˈskrɪpʃn/", "meaning": "处方；规定", "freq": "mid", "example": "Got a prescription from doctor." },
-        { "word": "subscribe", "phonetic": "/səbˈskraɪb/", "meaning": "订阅；同意", "freq": "high", "example": "I subscribe to the magazine." },
-        { "word": "manuscript", "phonetic": "/ˈmænjuskrɪpt/", "meaning": "手稿；原稿", "freq": "mid", "example": "The manuscript was published." }
+        {
+          "word": "describe",
+          "phonetic": "/dɪˈskraɪb/",
+          "meaning": "描述；说明",
+          "freq": "high",
+          "example": "Describe the accident."
+        },
+        {
+          "word": "script",
+          "phonetic": "/skrɪpt/",
+          "meaning": "脚本；手稿",
+          "freq": "high",
+          "example": "Read the script carefully."
+        },
+        {
+          "word": "prescription",
+          "phonetic": "/prɪˈskrɪpʃn/",
+          "meaning": "处方；规定",
+          "freq": "mid",
+          "example": "Got a prescription from doctor."
+        },
+        {
+          "word": "subscribe",
+          "phonetic": "/səbˈskraɪb/",
+          "meaning": "订阅；同意",
+          "freq": "high",
+          "example": "I subscribe to the magazine."
+        },
+        {
+          "word": "manuscript",
+          "phonetic": "/ˈmænjuskrɪpt/",
+          "meaning": "手稿；原稿",
+          "freq": "mid",
+          "example": "The manuscript was published."
+        },
+        {
+          "word": "description",
+          "phonetic": "/dɪˈskrɪpʃn/",
+          "meaning": "描述",
+          "freq": "high",
+          "example": "Give me a description."
+        },
+        {
+          "word": "descriptive",
+          "phonetic": "/dɪˈskrɪptɪv/",
+          "meaning": "描述性的",
+          "freq": "mid",
+          "example": "The writing is descriptive."
+        },
+        {
+          "word": "prescribe",
+          "phonetic": "/prɪˈskraɪb/",
+          "meaning": "开处方",
+          "freq": "mid",
+          "example": "The doctor prescribed medicine."
+        },
+        {
+          "word": "inscribe",
+          "phonetic": "/ɪnˈskraɪb/",
+          "meaning": "铭刻",
+          "freq": "mid",
+          "example": "The ring was inscribed with a name."
+        },
+        {
+          "word": "inscription",
+          "phonetic": "/ɪnˈskrɪpʃn/",
+          "meaning": "铭文",
+          "freq": "mid",
+          "example": "The inscription was ancient."
+        },
+        {
+          "word": "subscription",
+          "phonetic": "/səbˈskrɪpʃn/",
+          "meaning": "订阅",
+          "freq": "mid",
+          "example": "My subscription expires."
+        },
+        {
+          "word": "subscriber",
+          "phonetic": "/səbˈskraɪbər/",
+          "meaning": "订阅者",
+          "freq": "mid",
+          "example": "The channel has many subscribers."
+        },
+        {
+          "word": "transcribe",
+          "phonetic": "/trænˈskraɪb/",
+          "meaning": "转录",
+          "freq": "mid",
+          "example": "I will transcribe the recording."
+        },
+        {
+          "word": "transcript",
+          "phonetic": "/ˈtrænskrɪpt/",
+          "meaning": "成绩单",
+          "freq": "mid",
+          "example": "Get your transcript."
+        },
+        {
+          "word": "transcription",
+          "phonetic": "/trænˈskrɪpʃn/",
+          "meaning": "转录",
+          "freq": "mid",
+          "example": "The transcription is accurate."
+        },
+        {
+          "word": "scribble",
+          "phonetic": "/ˈskrɪbl/",
+          "meaning": "乱写",
+          "freq": "mid",
+          "example": "He scribbled notes."
+        },
+        {
+          "word": "scribe",
+          "phonetic": "/skraɪb/",
+          "meaning": "抄写员",
+          "freq": "mid",
+          "example": "The scribe copied the manuscript."
+        },
+        {
+          "word": "scripture",
+          "phonetic": "/ˈskrɪptʃər/",
+          "meaning": "经文",
+          "freq": "mid",
+          "example": "Read the scripture."
+        },
+        {
+          "word": "postscript",
+          "phonetic": "/ˈpoʊstskrɪpt/",
+          "meaning": "附言",
+          "freq": "low",
+          "example": "She added a postscript."
+        },
+        {
+          "word": "nondescript",
+          "phonetic": "/ˈnɑːndɪskrɪpt/",
+          "meaning": "平凡的",
+          "freq": "low",
+          "example": "The building was nondescript."
+        },
+        {
+          "word": "ascribe",
+          "phonetic": "/əˈskraɪb/",
+          "meaning": "归因于",
+          "freq": "low",
+          "example": "He ascribed his success to hard work."
+        },
+        {
+          "word": "circumscribe",
+          "phonetic": "/ˈsɜːrkəmskraɪb/",
+          "meaning": "限制",
+          "freq": "low",
+          "example": "The rules circumscribe our actions."
+        },
+        {
+          "word": "prescriptive",
+          "phonetic": "/prescriptive/",
+          "meaning": "prescriptive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "proscribe",
+          "phonetic": "/proscribe/",
+          "meaning": "proscribe",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "conscript",
+          "phonetic": "/conscript/",
+          "meaning": "conscript",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "rescript",
+          "phonetic": "/rescript/",
+          "meaning": "rescript",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "graph": {
       "meaning": "写、图表、记录",
       "words": [
-        { "word": "graph", "phonetic": "/ɡræf/", "meaning": "图表；图形", "freq": "high", "example": "The graph shows sales." },
-        { "word": "photograph", "phonetic": "/ˈfoʊtəɡræf/", "meaning": "照片；摄影", "freq": "high", "example": "Take a photograph." },
-        { "word": "paragraph", "phonetic": "/ˈpærəɡræf/", "meaning": "段落；段", "freq": "high", "example": "Read the first paragraph." },
-        { "word": "biography", "phonetic": "/baɪˈɑːɡrəfi/", "meaning": "传记", "freq": "mid", "example": "I read his biography." },
-        { "word": "geography", "phonetic": "/dʒiˈɑːɡrəfi/", "meaning": "地理", "freq": "high", "example": "Geography is my favorite." }
+        {
+          "word": "graph",
+          "phonetic": "/ɡræf/",
+          "meaning": "图表；图形",
+          "freq": "high",
+          "example": "The graph shows sales."
+        },
+        {
+          "word": "photograph",
+          "phonetic": "/ˈfoʊtəɡræf/",
+          "meaning": "照片；摄影",
+          "freq": "high",
+          "example": "Take a photograph."
+        },
+        {
+          "word": "paragraph",
+          "phonetic": "/ˈpærəɡræf/",
+          "meaning": "段落；段",
+          "freq": "high",
+          "example": "Read the first paragraph."
+        },
+        {
+          "word": "biography",
+          "phonetic": "/baɪˈɑːɡrəfi/",
+          "meaning": "传记",
+          "freq": "mid",
+          "example": "I read his biography."
+        },
+        {
+          "word": "geography",
+          "phonetic": "/dʒiˈɑːɡrəfi/",
+          "meaning": "地理",
+          "freq": "high",
+          "example": "Geography is my favorite."
+        },
+        {
+          "word": "graphic",
+          "phonetic": "/ˈɡræfɪk/",
+          "meaning": "图表的",
+          "freq": "high",
+          "example": "The graphic design is impressive."
+        },
+        {
+          "word": "graphics",
+          "phonetic": "/ˈɡræfɪks/",
+          "meaning": "图形",
+          "freq": "mid",
+          "example": "The graphics are stunning."
+        },
+        {
+          "word": "geographer",
+          "phonetic": "/dʒiˈɑːɡrəfər/",
+          "meaning": "地理学家",
+          "freq": "mid",
+          "example": "The geographer mapped the area."
+        },
+        {
+          "word": "geographic",
+          "phonetic": "/ˌdʒiːəˈɡræfɪk/",
+          "meaning": "地理的",
+          "freq": "mid",
+          "example": "The geographic features are unique."
+        },
+        {
+          "word": "geographical",
+          "phonetic": "/ˌdʒiːəˈɡræfɪkl/",
+          "meaning": "地理学的",
+          "freq": "mid",
+          "example": "The location has geographical advantages."
+        },
+        {
+          "word": "biographer",
+          "phonetic": "/baɪˈɑːɡrəfər/",
+          "meaning": "传记作者",
+          "freq": "low",
+          "example": "The biographer wrote about her life."
+        },
+        {
+          "word": "autobiography",
+          "phonetic": "/ˌɔːtəbaɪˈɑːɡrəfi/",
+          "meaning": "自传",
+          "freq": "mid",
+          "example": "She wrote an autobiography."
+        },
+        {
+          "word": "photographer",
+          "phonetic": "/fəˈtɑːɡrəfər/",
+          "meaning": "摄影师",
+          "freq": "mid",
+          "example": "The photographer took portraits."
+        },
+        {
+          "word": "photography",
+          "phonetic": "/fəˈtɑːɡrəfi/",
+          "meaning": "摄影",
+          "freq": "mid",
+          "example": "Photography is my hobby."
+        },
+        {
+          "word": "photographic",
+          "phonetic": "/ˌfoʊtəˈɡræfɪk/",
+          "meaning": "摄影的",
+          "freq": "mid",
+          "example": "He has a photographic memory."
+        },
+        {
+          "word": "telegraph",
+          "phonetic": "/ˈtelɪɡræf/",
+          "meaning": "电报",
+          "freq": "mid",
+          "example": "The telegraph was invented in 1837."
+        },
+        {
+          "word": "telegraphy",
+          "phonetic": "/təˈleɡrəfi/",
+          "meaning": "电报学",
+          "freq": "low",
+          "example": "Telegraphy changed communication."
+        },
+        {
+          "word": "calligraphy",
+          "phonetic": "/kəˈlɪɡrəfi/",
+          "meaning": "书法",
+          "freq": "mid",
+          "example": "Chinese calligraphy is beautiful."
+        },
+        {
+          "word": "calligrapher",
+          "phonetic": "/kəˈlɪɡrəfər/",
+          "meaning": "书法家",
+          "freq": "low",
+          "example": "The calligrapher wrote elegantly."
+        },
+        {
+          "word": "typography",
+          "phonetic": "/taɪˈpɑːɡrəfi/",
+          "meaning": "排版",
+          "freq": "mid",
+          "example": "The typography is clean."
+        },
+        {
+          "word": "topography",
+          "phonetic": "/təˈpɑːɡrəfi/",
+          "meaning": "地形学",
+          "freq": "low",
+          "example": "The topography is mountainous."
+        },
+        {
+          "word": "demography",
+          "phonetic": "/dɪˈmɑːɡrəfi/",
+          "meaning": "人口学",
+          "freq": "mid",
+          "example": "Demography studies populations."
+        },
+        {
+          "word": "demographic",
+          "phonetic": "/ˌdeməˈɡræfɪk/",
+          "meaning": "人口的",
+          "freq": "mid",
+          "example": "Demographic data shows trends."
+        },
+        {
+          "word": "cartography",
+          "phonetic": "/kɑːrˈtɑːɡrəfi/",
+          "meaning": "地图学",
+          "freq": "low",
+          "example": "Cartography is an ancient science."
+        },
+        {
+          "word": "lexicography",
+          "phonetic": "/ˌleksɪˈkɑːɡrəfi/",
+          "meaning": "词典学",
+          "freq": "low",
+          "example": "Lexicography is the study of dictionaries."
+        },
+        {
+          "word": "bibliography",
+          "phonetic": "/bibliography/",
+          "meaning": "bibliography",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "oceanography",
+          "phonetic": "/oceanography/",
+          "meaning": "oceanography",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "seismograph",
+          "phonetic": "/seismograph/",
+          "meaning": "seismograph",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "polygraph",
+          "phonetic": "/polygraph/",
+          "meaning": "polygraph",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "form": {
       "meaning": "形成、形式、美观",
       "words": [
-        { "word": "form", "phonetic": "/fɔːrm/", "meaning": "形式；表格；形成", "freq": "high", "example": "Fill in the form." },
-        { "word": "inform", "phonetic": "/ɪnˈfɔːrm/", "meaning": "通知；告诉", "freq": "high", "example": "Please inform me." },
-        { "word": "transform", "phonetic": "/trænzˈfɔːrm/", "meaning": "转变；改造", "freq": "high", "example": "The experience transformed him." },
-        { "word": "perform", "phonetic": "/pərˈfɔːrm/", "meaning": "执行；表演", "freq": "high", "example": "She performed on stage." },
-        { "word": "reform", "phonetic": "/rɪˈfɔːrm/", "meaning": "改革；改良", "freq": "high", "example": "Reform the system." },
-        { "word": "deform", "phonetic": "/dɪˈfɔːrm/", "meaning": "使变形；损毁", "freq": "mid", "example": "Heat deformed the plastic." }
+        {
+          "word": "form",
+          "phonetic": "/fɔːrm/",
+          "meaning": "形式；表格；形成",
+          "freq": "high",
+          "example": "Fill in the form."
+        },
+        {
+          "word": "inform",
+          "phonetic": "/ɪnˈfɔːrm/",
+          "meaning": "通知；告诉",
+          "freq": "high",
+          "example": "Please inform me."
+        },
+        {
+          "word": "transform",
+          "phonetic": "/trænzˈfɔːrm/",
+          "meaning": "转变；改造",
+          "freq": "high",
+          "example": "The experience transformed him."
+        },
+        {
+          "word": "perform",
+          "phonetic": "/pərˈfɔːrm/",
+          "meaning": "执行；表演",
+          "freq": "high",
+          "example": "She performed on stage."
+        },
+        {
+          "word": "reform",
+          "phonetic": "/rɪˈfɔːrm/",
+          "meaning": "改革；改良",
+          "freq": "high",
+          "example": "Reform the system."
+        },
+        {
+          "word": "deform",
+          "phonetic": "/dɪˈfɔːrm/",
+          "meaning": "使变形；损毁",
+          "freq": "mid",
+          "example": "Heat deformed the plastic."
+        },
+        {
+          "word": "formal",
+          "phonetic": "/ˈfɔːrml/",
+          "meaning": "正式的",
+          "freq": "high",
+          "example": "Wear formal attire."
+        },
+        {
+          "word": "informal",
+          "phonetic": "/ɪnˈfɔːrml/",
+          "meaning": "非正式的",
+          "freq": "mid",
+          "example": "The meeting was informal."
+        },
+        {
+          "word": "formally",
+          "phonetic": "/ˈfɔːrməli/",
+          "meaning": "正式地",
+          "freq": "mid",
+          "example": "I formally apologize."
+        },
+        {
+          "word": "informality",
+          "phonetic": "/ˌɪnfɔːrˈmæləti/",
+          "meaning": "非正式",
+          "freq": "low",
+          "example": "The informality of the gathering was nice."
+        },
+        {
+          "word": "format",
+          "phonetic": "/ˈfɔːrmæt/",
+          "meaning": "格式",
+          "freq": "mid",
+          "example": "What format should I use?"
+        },
+        {
+          "word": "formation",
+          "phonetic": "/fɔːrˈmeɪʃn/",
+          "meaning": "形成",
+          "freq": "mid",
+          "example": "The rock formation is ancient."
+        },
+        {
+          "word": "formative",
+          "phonetic": "/ˈfɔːrmətɪv/",
+          "meaning": "形成的",
+          "freq": "mid",
+          "example": "Childhood is a formative period."
+        },
+        {
+          "word": "formula",
+          "phonetic": "/ˈfɔːrmjələ/",
+          "meaning": "公式",
+          "freq": "mid",
+          "example": "The formula is complex."
+        },
+        {
+          "word": "formulate",
+          "phonetic": "/ˈfɔːrmjuleɪt/",
+          "meaning": "制定",
+          "freq": "mid",
+          "example": "We need to formulate a plan."
+        },
+        {
+          "word": "formulation",
+          "phonetic": "/ˌfɔːrmjuˈleɪʃn/",
+          "meaning": "制定",
+          "freq": "mid",
+          "example": "The formulation of the policy took time."
+        },
+        {
+          "word": "reformer",
+          "phonetic": "/rɪˈfɔːrmər/",
+          "meaning": "改革者",
+          "freq": "mid",
+          "example": "He was a social reformer."
+        },
+        {
+          "word": "reformation",
+          "phonetic": "/ˌrefərˈmeɪʃn/",
+          "meaning": "改革",
+          "freq": "mid",
+          "example": "The reformation changed society."
+        },
+        {
+          "word": "reformatory",
+          "phonetic": "/rɪˈfɔːrmətɔːri/",
+          "meaning": "感化院",
+          "freq": "low",
+          "example": "The youth was sent to a reformatory."
+        },
+        {
+          "word": "information",
+          "phonetic": "/ˌɪnfərˈmeɪʃn/",
+          "meaning": "信息",
+          "freq": "high",
+          "example": "I need information."
+        },
+        {
+          "word": "informative",
+          "phonetic": "/ɪnˈfɔːrmətɪv/",
+          "meaning": "信息丰富的",
+          "freq": "mid",
+          "example": "The lecture was informative."
+        },
+        {
+          "word": "informer",
+          "phonetic": "/ɪnˈfɔːrmər/",
+          "meaning": "告密者",
+          "freq": "low",
+          "example": "The informer gave evidence."
+        },
+        {
+          "word": "transformation",
+          "phonetic": "/ˌtrænsfərˈmeɪʃn/",
+          "meaning": "转变",
+          "freq": "mid",
+          "example": "The transformation was remarkable."
+        },
+        {
+          "word": "transformer",
+          "phonetic": "/trænsˈfɔːrmər/",
+          "meaning": "变压器",
+          "freq": "mid",
+          "example": "The transformer converts voltage."
+        },
+        {
+          "word": "conform",
+          "phonetic": "/kənˈfɔːrm/",
+          "meaning": "符合",
+          "freq": "mid",
+          "example": "You must conform to the rules."
+        },
+        {
+          "word": "conformity",
+          "phonetic": "/kənˈfɔːrməti/",
+          "meaning": "一致",
+          "freq": "mid",
+          "example": "Conformity is expected."
+        },
+        {
+          "word": "nonconformist",
+          "phonetic": "/ˌnɑːnkənˈfɔːrmɪst/",
+          "meaning": "不墨守成规者",
+          "freq": "low",
+          "example": "He was a nonconformist."
+        },
+        {
+          "word": "uniform",
+          "phonetic": "/ˈjuːnɪfɔːrm/",
+          "meaning": "制服",
+          "freq": "high",
+          "example": "Wear your uniform."
+        },
+        {
+          "word": "uniformity",
+          "phonetic": "/ˌjuːnɪˈfɔːrməti/",
+          "meaning": "一致",
+          "freq": "mid",
+          "example": "Uniformity is important in the military."
+        },
+        {
+          "word": "platform",
+          "phonetic": "/ˈplætfɔːrm/",
+          "meaning": "平台",
+          "freq": "high",
+          "example": "The train platform is crowded."
+        },
+        {
+          "word": "deformation",
+          "phonetic": "/ˌdiːfɔːrˈmeɪʃn/",
+          "meaning": "变形",
+          "freq": "low",
+          "example": "Deformation of the structure occurred."
+        },
+        {
+          "word": "malformation",
+          "phonetic": "/ˌmælfɔːrˈmeɪʃn/",
+          "meaning": "畸形",
+          "freq": "low",
+          "example": "The birth caused a malformation."
+        },
+        {
+          "word": "performance",
+          "phonetic": "/pərˈfɔːrməns/",
+          "meaning": "表演",
+          "freq": "high",
+          "example": "The performance was excellent."
+        },
+        {
+          "word": "performer",
+          "phonetic": "/pərˈfɔːrmər/",
+          "meaning": "表演者",
+          "freq": "mid",
+          "example": "The performer received applause."
+        },
+        {
+          "word": "conformist",
+          "phonetic": "/conformist/",
+          "meaning": "conformist",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "multiform",
+          "phonetic": "/multiform/",
+          "meaning": "multiform",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "reformist",
+          "phonetic": "/reformist/",
+          "meaning": "reformist",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "formless",
+          "phonetic": "/formless/",
+          "meaning": "formless",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "vert": {
       "meaning": "转、转动、翻转",
       "words": [
-        { "word": "convert", "phonetic": "/kənˈvɜːrt/", "meaning": "转换；改变", "freq": "high", "example": "Convert the document to PDF." },
-        { "word": "invert", "phonetic": "/ɪnˈvɜːrt/", "meaning": "倒转；反转", "freq": "mid", "example": "Invert the image." },
-        { "word": "divert", "phonetic": "/dɪˈvɜːrt/", "meaning": "转移；改道", "freq": "mid", "example": "The river was diverted." },
-        { "word": "advertise", "phonetic": "/ˈædvərtaɪz/", "meaning": "做广告；宣传", "freq": "high", "example": "They advertised the product." },
-        { "word": "extrovert", "phonetic": "/ˈekstrəvɜːrt/", "meaning": "外向的人", "freq": "mid", "example": "She is an extrovert." }
+        {
+          "word": "convert",
+          "phonetic": "/kənˈvɜːrt/",
+          "meaning": "转换；改变",
+          "freq": "high",
+          "example": "Convert the document to PDF."
+        },
+        {
+          "word": "invert",
+          "phonetic": "/ɪnˈvɜːrt/",
+          "meaning": "倒转；反转",
+          "freq": "mid",
+          "example": "Invert the image."
+        },
+        {
+          "word": "divert",
+          "phonetic": "/dɪˈvɜːrt/",
+          "meaning": "转移；改道",
+          "freq": "mid",
+          "example": "The river was diverted."
+        },
+        {
+          "word": "advertise",
+          "phonetic": "/ˈædvərtaɪz/",
+          "meaning": "做广告；宣传",
+          "freq": "high",
+          "example": "They advertised the product."
+        },
+        {
+          "word": "extrovert",
+          "phonetic": "/ˈekstrəvɜːrt/",
+          "meaning": "外向的人",
+          "freq": "mid",
+          "example": "She is an extrovert."
+        },
+        {
+          "word": "vert",
+          "phonetic": "/vert/",
+          "meaning": "vert",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "vertex",
+          "phonetic": "/vertex/",
+          "meaning": "vertex",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "vertical",
+          "phonetic": "/vertical/",
+          "meaning": "vertical",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "conversion",
+          "phonetic": "/conversion/",
+          "meaning": "conversion",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "converter",
+          "phonetic": "/converter/",
+          "meaning": "converter",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "convertible",
+          "phonetic": "/convertible/",
+          "meaning": "convertible",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "diversion",
+          "phonetic": "/diversion/",
+          "meaning": "diversion",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "inverse",
+          "phonetic": "/inverse/",
+          "meaning": "inverse",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "inversion",
+          "phonetic": "/inversion/",
+          "meaning": "inversion",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "reverse",
+          "phonetic": "/reverse/",
+          "meaning": "reverse",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "reversal",
+          "phonetic": "/reversal/",
+          "meaning": "reversal",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "reversible",
+          "phonetic": "/reversible/",
+          "meaning": "reversible",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "irreversible",
+          "phonetic": "/irreversible/",
+          "meaning": "irreversible",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "subvert",
+          "phonetic": "/subvert/",
+          "meaning": "subvert",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "subversion",
+          "phonetic": "/subversion/",
+          "meaning": "subversion",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "subversive",
+          "phonetic": "/subversive/",
+          "meaning": "subversive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "averse",
+          "phonetic": "/averse/",
+          "meaning": "averse",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "aversion",
+          "phonetic": "/aversion/",
+          "meaning": "aversion",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "advertisement",
+          "phonetic": "/advertisement/",
+          "meaning": "advertisement",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "advertiser",
+          "phonetic": "/advertiser/",
+          "meaning": "advertiser",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "controversy",
+          "phonetic": "/controversy/",
+          "meaning": "controversy",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "controversial",
+          "phonetic": "/controversial/",
+          "meaning": "controversial",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "diverse",
+          "phonetic": "/diverse/",
+          "meaning": "diverse",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "diversity",
+          "phonetic": "/diversity/",
+          "meaning": "diversity",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "diversify",
+          "phonetic": "/diversify/",
+          "meaning": "diversify",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "perverse",
+          "phonetic": "/perverse/",
+          "meaning": "perverse",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "perversion",
+          "phonetic": "/perversion/",
+          "meaning": "perversion",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "pervert",
+          "phonetic": "/pervert/",
+          "meaning": "pervert",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "introvert",
+          "phonetic": "/introvert/",
+          "meaning": "introvert",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "ambivert",
+          "phonetic": "/ambivert/",
+          "meaning": "ambivert",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "tract": {
       "meaning": "拉、牵引、吸引",
       "words": [
-        { "word": "attract", "phonetic": "/əˈtrækt/", "meaning": "吸引；引起", "freq": "high", "example": "The museum attracts visitors." },
-        { "word": "contract", "phonetic": "/ˈkɑːntrækt/", "meaning": "合同；收缩", "freq": "high", "example": "Sign the contract." },
-        { "word": "distract", "phonetic": "/dɪˈstrækt/", "meaning": "分散注意力", "freq": "high", "example": "Don't distract me." },
-        { "word": "subtract", "phonetic": "/səbˈtrækt/", "meaning": "减去；扣除", "freq": "mid", "example": "Subtract 5 from 10." },
-        { "word": "extract", "phonetic": "/ɪkˈstrækt/", "meaning": "提取；摘录", "freq": "high", "example": "Extract the teeth." }
+        {
+          "word": "attract",
+          "phonetic": "/əˈtrækt/",
+          "meaning": "吸引；引起",
+          "freq": "high",
+          "example": "The museum attracts visitors."
+        },
+        {
+          "word": "contract",
+          "phonetic": "/ˈkɑːntrækt/",
+          "meaning": "合同；收缩",
+          "freq": "high",
+          "example": "Sign the contract."
+        },
+        {
+          "word": "distract",
+          "phonetic": "/dɪˈstrækt/",
+          "meaning": "分散注意力",
+          "freq": "high",
+          "example": "Don't distract me."
+        },
+        {
+          "word": "subtract",
+          "phonetic": "/səbˈtrækt/",
+          "meaning": "减去；扣除",
+          "freq": "mid",
+          "example": "Subtract 5 from 10."
+        },
+        {
+          "word": "extract",
+          "phonetic": "/ɪkˈstrækt/",
+          "meaning": "提取；摘录",
+          "freq": "high",
+          "example": "Extract the teeth."
+        },
+        {
+          "word": "tract",
+          "phonetic": "/tract/",
+          "meaning": "tract",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "tractor",
+          "phonetic": "/tractor/",
+          "meaning": "tractor",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "traction",
+          "phonetic": "/traction/",
+          "meaning": "traction",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "abstract",
+          "phonetic": "/abstract/",
+          "meaning": "abstract",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "abstraction",
+          "phonetic": "/abstraction/",
+          "meaning": "abstraction",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "abstracted",
+          "phonetic": "/abstracted/",
+          "meaning": "abstracted",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "attraction",
+          "phonetic": "/attraction/",
+          "meaning": "attraction",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "attractive",
+          "phonetic": "/attractive/",
+          "meaning": "attractive",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "unattractive",
+          "phonetic": "/unattractive/",
+          "meaning": "unattractive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "contraction",
+          "phonetic": "/contraction/",
+          "meaning": "contraction",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "contractor",
+          "phonetic": "/contractor/",
+          "meaning": "contractor",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "detract",
+          "phonetic": "/detract/",
+          "meaning": "detract",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "detraction",
+          "phonetic": "/detraction/",
+          "meaning": "detraction",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "detractor",
+          "phonetic": "/detractor/",
+          "meaning": "detractor",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "distraction",
+          "phonetic": "/distraction/",
+          "meaning": "distraction",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "distracted",
+          "phonetic": "/distracted/",
+          "meaning": "distracted",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "extraction",
+          "phonetic": "/extraction/",
+          "meaning": "extraction",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "extractor",
+          "phonetic": "/extractor/",
+          "meaning": "extractor",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "protract",
+          "phonetic": "/protract/",
+          "meaning": "protract",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "protracted",
+          "phonetic": "/protracted/",
+          "meaning": "protracted",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "retract",
+          "phonetic": "/retract/",
+          "meaning": "retract",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "retraction",
+          "phonetic": "/retraction/",
+          "meaning": "retraction",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "retractable",
+          "phonetic": "/retractable/",
+          "meaning": "retractable",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "subtraction",
+          "phonetic": "/subtraction/",
+          "meaning": "subtraction",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "intractable",
+          "phonetic": "/intractable/",
+          "meaning": "intractable",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "tractable",
+          "phonetic": "/tractable/",
+          "meaning": "tractable",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "protractor",
+          "phonetic": "/protractor/",
+          "meaning": "protractor",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "subtractor",
+          "phonetic": "/subtractor/",
+          "meaning": "subtractor",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "ject": {
       "meaning": "投掷、扔、投射",
       "words": [
-        { "word": "subject", "phonetic": "/ˈsʌbdʒɪkt/", "meaning": "主题；科目；受制于", "freq": "high", "example": "What is the subject?" },
-        { "word": "project", "phonetic": "/ˈprɑːdʒekt/", "meaning": "项目；投射；突出", "freq": "high", "example": "This is a huge project." },
-        { "word": "object", "phonetic": "/ˈɑːbdʒekt/", "meaning": "目标；反对；物体", "freq": "high", "example": "I object to that plan." },
-        { "word": "reject", "phonetic": "/rɪˈdʒekt/", "meaning": "拒绝；否决", "freq": "high", "example": "They rejected the offer." },
-        { "word": "inject", "phonetic": "/ɪnˈdʒekt/", "meaning": "注射；引入", "freq": "mid", "example": "The doctor injected medicine." }
+        {
+          "word": "subject",
+          "phonetic": "/ˈsʌbdʒɪkt/",
+          "meaning": "主题；科目；受制于",
+          "freq": "high",
+          "example": "What is the subject?"
+        },
+        {
+          "word": "project",
+          "phonetic": "/ˈprɑːdʒekt/",
+          "meaning": "项目；投射；突出",
+          "freq": "high",
+          "example": "This is a huge project."
+        },
+        {
+          "word": "object",
+          "phonetic": "/ˈɑːbdʒekt/",
+          "meaning": "目标；反对；物体",
+          "freq": "high",
+          "example": "I object to that plan."
+        },
+        {
+          "word": "reject",
+          "phonetic": "/rɪˈdʒekt/",
+          "meaning": "拒绝；否决",
+          "freq": "high",
+          "example": "They rejected the offer."
+        },
+        {
+          "word": "inject",
+          "phonetic": "/ɪnˈdʒekt/",
+          "meaning": "注射；引入",
+          "freq": "mid",
+          "example": "The doctor injected medicine."
+        },
+        {
+          "word": "ject",
+          "phonetic": "/ject/",
+          "meaning": "ject",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "eject",
+          "phonetic": "/eject/",
+          "meaning": "eject",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "ejection",
+          "phonetic": "/ejection/",
+          "meaning": "ejection",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "ejector",
+          "phonetic": "/ejector/",
+          "meaning": "ejector",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "injection",
+          "phonetic": "/injection/",
+          "meaning": "injection",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "injector",
+          "phonetic": "/injector/",
+          "meaning": "injector",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "projection",
+          "phonetic": "/projection/",
+          "meaning": "projection",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "projector",
+          "phonetic": "/projector/",
+          "meaning": "projector",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "rejection",
+          "phonetic": "/rejection/",
+          "meaning": "rejection",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "subjection",
+          "phonetic": "/subjection/",
+          "meaning": "subjection",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "subjective",
+          "phonetic": "/subjective/",
+          "meaning": "subjective",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "objection",
+          "phonetic": "/objection/",
+          "meaning": "objection",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "objective",
+          "phonetic": "/objective/",
+          "meaning": "objective",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "objectivity",
+          "phonetic": "/objectivity/",
+          "meaning": "objectivity",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "trajectory",
+          "phonetic": "/trajectory/",
+          "meaning": "trajectory",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "interject",
+          "phonetic": "/interject/",
+          "meaning": "interject",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "interjection",
+          "phonetic": "/interjection/",
+          "meaning": "interjection",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "conjecture",
+          "phonetic": "/conjecture/",
+          "meaning": "conjecture",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "deject",
+          "phonetic": "/deject/",
+          "meaning": "deject",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "dejected",
+          "phonetic": "/dejected/",
+          "meaning": "dejected",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "dejection",
+          "phonetic": "/dejection/",
+          "meaning": "dejection",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "abject",
+          "phonetic": "/abject/",
+          "meaning": "abject",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "abjection",
+          "phonetic": "/abjection/",
+          "meaning": "abjection",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "mit": {
       "meaning": "送、派遣、允许",
       "words": [
-        { "word": "admit", "phonetic": "/ədˈmɪt/", "meaning": "承认；允许进入", "freq": "high", "example": "He admitted his mistake." },
-        { "word": "commit", "phonetic": "/kəˈmɪt/", "meaning": "承诺；犯罪", "freq": "high", "example": "She committed to the project." },
-        { "word": "submit", "phonetic": "/səbˈmɪt/", "meaning": "提交；屈服", "freq": "high", "example": "Submit your homework." },
-        { "word": "transmit", "phonetic": "/trænzˈmɪt/", "meaning": "传送；传播", "freq": "high", "example": "The signal is transmitted." },
-        { "word": "omit", "phonetic": "/oʊˈmɪt/", "meaning": "遗漏；省略", "freq": "mid", "example": "Don't omit any details." },
-        { "word": "permit", "phonetic": "/pərˈmɪt/", "meaning": "允许；许可证", "freq": "high", "example": "Do you have a permit?" }
+        {
+          "word": "admit",
+          "phonetic": "/ədˈmɪt/",
+          "meaning": "承认；允许进入",
+          "freq": "high",
+          "example": "He admitted his mistake."
+        },
+        {
+          "word": "commit",
+          "phonetic": "/kəˈmɪt/",
+          "meaning": "承诺；犯罪",
+          "freq": "high",
+          "example": "She committed to the project."
+        },
+        {
+          "word": "submit",
+          "phonetic": "/səbˈmɪt/",
+          "meaning": "提交；屈服",
+          "freq": "high",
+          "example": "Submit your homework."
+        },
+        {
+          "word": "transmit",
+          "phonetic": "/trænzˈmɪt/",
+          "meaning": "传送；传播",
+          "freq": "high",
+          "example": "The signal is transmitted."
+        },
+        {
+          "word": "omit",
+          "phonetic": "/oʊˈmɪt/",
+          "meaning": "遗漏；省略",
+          "freq": "mid",
+          "example": "Don't omit any details."
+        },
+        {
+          "word": "permit",
+          "phonetic": "/pərˈmɪt/",
+          "meaning": "允许；许可证",
+          "freq": "high",
+          "example": "Do you have a permit?"
+        },
+        {
+          "word": "mit",
+          "phonetic": "/mit/",
+          "meaning": "mit",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "emit",
+          "phonetic": "/emit/",
+          "meaning": "emit",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "emission",
+          "phonetic": "/emission/",
+          "meaning": "emission",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "emitter",
+          "phonetic": "/emitter/",
+          "meaning": "emitter",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "admission",
+          "phonetic": "/admission/",
+          "meaning": "admission",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "admittance",
+          "phonetic": "/admittance/",
+          "meaning": "admittance",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "commitment",
+          "phonetic": "/commitment/",
+          "meaning": "commitment",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "commission",
+          "phonetic": "/commission/",
+          "meaning": "commission",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "committee",
+          "phonetic": "/committee/",
+          "meaning": "committee",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "permission",
+          "phonetic": "/permission/",
+          "meaning": "permission",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "permissive",
+          "phonetic": "/permissive/",
+          "meaning": "permissive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "permissible",
+          "phonetic": "/permissible/",
+          "meaning": "permissible",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "transmission",
+          "phonetic": "/transmission/",
+          "meaning": "transmission",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "transmitter",
+          "phonetic": "/transmitter/",
+          "meaning": "transmitter",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "submission",
+          "phonetic": "/submission/",
+          "meaning": "submission",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "submissive",
+          "phonetic": "/submissive/",
+          "meaning": "submissive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "omission",
+          "phonetic": "/omission/",
+          "meaning": "omission",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "remit",
+          "phonetic": "/remit/",
+          "meaning": "remit",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "remission",
+          "phonetic": "/remission/",
+          "meaning": "remission",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "remittance",
+          "phonetic": "/remittance/",
+          "meaning": "remittance",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "intermit",
+          "phonetic": "/intermit/",
+          "meaning": "intermit",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "intermission",
+          "phonetic": "/intermission/",
+          "meaning": "intermission",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "noncommittal",
+          "phonetic": "/noncommittal/",
+          "meaning": "noncommittal",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "committal",
+          "phonetic": "/committal/",
+          "meaning": "committal",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "mov": {
       "meaning": "移动、活动、感动",
       "words": [
-        { "word": "move", "phonetic": "/muːv/", "meaning": "移动；搬家", "freq": "high", "example": "Can you move that chair?" },
-        { "word": "remove", "phonetic": "/rɪˈmuːv/", "meaning": "移除；消除", "freq": "high", "example": "Remove your shoes." },
-        { "word": "motion", "phonetic": "/ˈmoʊʃn/", "meaning": "运动；动作", "freq": "high", "example": "The motion was approved." },
-        { "word": "motor", "phonetic": "/ˈmoʊtər/", "meaning": "马达；引擎", "freq": "high", "example": "The motor is broken." },
-        { "word": "movie", "phonetic": "/ˈmuːvi/", "meaning": "电影；影片", "freq": "high", "example": "Let's watch a movie." },
-        { "word": "moment", "phonetic": "/ˈmoʊmənt/", "meaning": "时刻；片刻", "freq": "high", "example": "Wait a moment." }
+        {
+          "word": "move",
+          "phonetic": "/muːv/",
+          "meaning": "移动；搬家",
+          "freq": "high",
+          "example": "Can you move that chair?"
+        },
+        {
+          "word": "remove",
+          "phonetic": "/rɪˈmuːv/",
+          "meaning": "移除；消除",
+          "freq": "high",
+          "example": "Remove your shoes."
+        },
+        {
+          "word": "motion",
+          "phonetic": "/ˈmoʊʃn/",
+          "meaning": "运动；动作",
+          "freq": "high",
+          "example": "The motion was approved."
+        },
+        {
+          "word": "motor",
+          "phonetic": "/ˈmoʊtər/",
+          "meaning": "马达；引擎",
+          "freq": "high",
+          "example": "The motor is broken."
+        },
+        {
+          "word": "movie",
+          "phonetic": "/ˈmuːvi/",
+          "meaning": "电影；影片",
+          "freq": "high",
+          "example": "Let's watch a movie."
+        },
+        {
+          "word": "moment",
+          "phonetic": "/ˈmoʊmənt/",
+          "meaning": "时刻；片刻",
+          "freq": "high",
+          "example": "Wait a moment."
+        },
+        {
+          "word": "movement",
+          "phonetic": "/movement/",
+          "meaning": "movement",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "movable",
+          "phonetic": "/movable/",
+          "meaning": "movable",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "movably",
+          "phonetic": "/movably/",
+          "meaning": "movably",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "removal",
+          "phonetic": "/removal/",
+          "meaning": "removal",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "removable",
+          "phonetic": "/removable/",
+          "meaning": "removable",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "mobile",
+          "phonetic": "/mobile/",
+          "meaning": "mobile",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "mobility",
+          "phonetic": "/mobility/",
+          "meaning": "mobility",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "immobile",
+          "phonetic": "/immobile/",
+          "meaning": "immobile",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "immobility",
+          "phonetic": "/immobility/",
+          "meaning": "immobility",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "automobile",
+          "phonetic": "/automobile/",
+          "meaning": "automobile",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "automotive",
+          "phonetic": "/automotive/",
+          "meaning": "automotive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "motive",
+          "phonetic": "/motive/",
+          "meaning": "motive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "motivate",
+          "phonetic": "/motivate/",
+          "meaning": "motivate",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "motivation",
+          "phonetic": "/motivation/",
+          "meaning": "motivation",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "motivational",
+          "phonetic": "/motivational/",
+          "meaning": "motivational",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "motorist",
+          "phonetic": "/motorist/",
+          "meaning": "motorist",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "motorcycle",
+          "phonetic": "/motorcycle/",
+          "meaning": "motorcycle",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "motoring",
+          "phonetic": "/motoring/",
+          "meaning": "motoring",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "promote",
+          "phonetic": "/promote/",
+          "meaning": "promote",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "promotion",
+          "phonetic": "/promotion/",
+          "meaning": "promotion",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "promoter",
+          "phonetic": "/promoter/",
+          "meaning": "promoter",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "promotional",
+          "phonetic": "/promotional/",
+          "meaning": "promotional",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "remote",
+          "phonetic": "/remote/",
+          "meaning": "remote",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "remotely",
+          "phonetic": "/remotely/",
+          "meaning": "remotely",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "remoteness",
+          "phonetic": "/remoteness/",
+          "meaning": "remoteness",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "emotion",
+          "phonetic": "/emotion/",
+          "meaning": "emotion",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "emotional",
+          "phonetic": "/emotional/",
+          "meaning": "emotional",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "emotionally",
+          "phonetic": "/emotionally/",
+          "meaning": "emotionally",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "emotive",
+          "phonetic": "/emotive/",
+          "meaning": "emotive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "commotion",
+          "phonetic": "/commotion/",
+          "meaning": "commotion",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "locomotive",
+          "phonetic": "/locomotive/",
+          "meaning": "locomotive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "demote",
+          "phonetic": "/demote/",
+          "meaning": "demote",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "demotion",
+          "phonetic": "/demotion/",
+          "meaning": "demotion",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "tend": {
       "meaning": "伸张、趋向、照顾",
       "words": [
-        { "word": "attend", "phonetic": "/əˈtend/", "meaning": "参加；出席；照顾", "freq": "high", "example": "I attend school every day." },
-        { "word": "extend", "phonetic": "/ɪkˈstend/", "meaning": "延伸；延长", "freq": "high", "example": "The road extends for miles." },
-        { "word": "intend", "phonetic": "/ɪnˈtend/", "meaning": "意图；打算", "freq": "high", "example": "What do you intend to do?" },
-        { "word": "pretend", "phonetic": "/prɪˈtend/", "meaning": "假装；伪装", "freq": "high", "example": "Don't pretend you didn't see me." },
-        { "word": "contend", "phonetic": "/kənˈtend/", "meaning": "竞争；主张", "freq": "mid", "example": "They contended for the prize." }
+        {
+          "word": "attend",
+          "phonetic": "/əˈtend/",
+          "meaning": "参加；出席；照顾",
+          "freq": "high",
+          "example": "I attend school every day."
+        },
+        {
+          "word": "extend",
+          "phonetic": "/ɪkˈstend/",
+          "meaning": "延伸；延长",
+          "freq": "high",
+          "example": "The road extends for miles."
+        },
+        {
+          "word": "intend",
+          "phonetic": "/ɪnˈtend/",
+          "meaning": "意图；打算",
+          "freq": "high",
+          "example": "What do you intend to do?"
+        },
+        {
+          "word": "pretend",
+          "phonetic": "/prɪˈtend/",
+          "meaning": "假装；伪装",
+          "freq": "high",
+          "example": "Don't pretend you didn't see me."
+        },
+        {
+          "word": "contend",
+          "phonetic": "/kənˈtend/",
+          "meaning": "竞争；主张",
+          "freq": "mid",
+          "example": "They contended for the prize."
+        },
+        {
+          "word": "tend",
+          "phonetic": "/tend/",
+          "meaning": "tend",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "tendency",
+          "phonetic": "/tendency/",
+          "meaning": "tendency",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "tendentious",
+          "phonetic": "/tendentious/",
+          "meaning": "tendentious",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "attendance",
+          "phonetic": "/attendance/",
+          "meaning": "attendance",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "attendant",
+          "phonetic": "/attendant/",
+          "meaning": "attendant",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "attention",
+          "phonetic": "/attention/",
+          "meaning": "attention",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "attentive",
+          "phonetic": "/attentive/",
+          "meaning": "attentive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "contender",
+          "phonetic": "/contender/",
+          "meaning": "contender",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "contention",
+          "phonetic": "/contention/",
+          "meaning": "contention",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "contentious",
+          "phonetic": "/contentious/",
+          "meaning": "contentious",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "extension",
+          "phonetic": "/extension/",
+          "meaning": "extension",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "extensive",
+          "phonetic": "/extensive/",
+          "meaning": "extensive",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "extent",
+          "phonetic": "/extent/",
+          "meaning": "extent",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "intention",
+          "phonetic": "/intention/",
+          "meaning": "intention",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "intentional",
+          "phonetic": "/intentional/",
+          "meaning": "intentional",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "intent",
+          "phonetic": "/intent/",
+          "meaning": "intent",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "pretense",
+          "phonetic": "/pretense/",
+          "meaning": "pretense",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "pretension",
+          "phonetic": "/pretension/",
+          "meaning": "pretension",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "pretentious",
+          "phonetic": "/pretentious/",
+          "meaning": "pretentious",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "distend",
+          "phonetic": "/distend/",
+          "meaning": "distend",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "distension",
+          "phonetic": "/distension/",
+          "meaning": "distension",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "portend",
+          "phonetic": "/portend/",
+          "meaning": "portend",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "portent",
+          "phonetic": "/portent/",
+          "meaning": "portent",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "portentous",
+          "phonetic": "/portentous/",
+          "meaning": "portentous",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "superintend",
+          "phonetic": "/superintend/",
+          "meaning": "superintend",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "superintendent",
+          "phonetic": "/superintendent/",
+          "meaning": "superintendent",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "tender",
+          "phonetic": "/tender/",
+          "meaning": "tender",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "tenderness",
+          "phonetic": "/tenderness/",
+          "meaning": "tenderness",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "tendon",
+          "phonetic": "/tendon/",
+          "meaning": "tendon",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "hold": {
       "meaning": "握住、拿住、保持",
       "words": [
-        { "word": "hold", "phonetic": "/hoʊld/", "meaning": "握住；拿住；坚持", "freq": "high", "example": "Hold my hand." },
-        { "word": "withhold", "phonetic": "/wɪðˈhoʊld/", "meaning": "保留；扣留", "freq": "mid", "example": "Withhold the information." },
-        { "word": "uphold", "phonetic": "/ʌpˈhoʊld/", "meaning": "支持；维持", "freq": "mid", "example": "Uphold the decision." },
-        { "word": "household", "phonetic": "/ˈhaʊshoʊld/", "meaning": "家庭；家务的", "freq": "high", "example": "Household items on sale." },
-        { "word": "behold", "phonetic": "/bɪˈhoʊld/", "meaning": "看；注视；观看", "freq": "mid", "example": "Behold the beauty of nature!" }
+        {
+          "word": "hold",
+          "phonetic": "/hoʊld/",
+          "meaning": "握住；拿住；坚持",
+          "freq": "high",
+          "example": "Hold my hand."
+        },
+        {
+          "word": "withhold",
+          "phonetic": "/wɪðˈhoʊld/",
+          "meaning": "保留；扣留",
+          "freq": "mid",
+          "example": "Withhold the information."
+        },
+        {
+          "word": "uphold",
+          "phonetic": "/ʌpˈhoʊld/",
+          "meaning": "支持；维持",
+          "freq": "mid",
+          "example": "Uphold the decision."
+        },
+        {
+          "word": "household",
+          "phonetic": "/ˈhaʊshoʊld/",
+          "meaning": "家庭；家务的",
+          "freq": "high",
+          "example": "Household items on sale."
+        },
+        {
+          "word": "behold",
+          "phonetic": "/bɪˈhoʊld/",
+          "meaning": "看；注视；观看",
+          "freq": "mid",
+          "example": "Behold the beauty of nature!"
+        },
+        {
+          "word": "holder",
+          "phonetic": "/holder/",
+          "meaning": "holder",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "holding",
+          "phonetic": "/holding/",
+          "meaning": "holding",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "beholder",
+          "phonetic": "/beholder/",
+          "meaning": "beholder",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "upholder",
+          "phonetic": "/upholder/",
+          "meaning": "upholder",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "withholder",
+          "phonetic": "/withholder/",
+          "meaning": "withholder",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "householder",
+          "phonetic": "/householder/",
+          "meaning": "householder",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "threshold",
+          "phonetic": "/threshold/",
+          "meaning": "threshold",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "foothold",
+          "phonetic": "/foothold/",
+          "meaning": "foothold",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "handhold",
+          "phonetic": "/handhold/",
+          "meaning": "handhold",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "holdup",
+          "phonetic": "/holdup/",
+          "meaning": "holdup",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "holdover",
+          "phonetic": "/holdover/",
+          "meaning": "holdover",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "holdback",
+          "phonetic": "/holdback/",
+          "meaning": "holdback",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "stronghold",
+          "phonetic": "/stronghold/",
+          "meaning": "stronghold",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "freehold",
+          "phonetic": "/freehold/",
+          "meaning": "freehold",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "leasehold",
+          "phonetic": "/leasehold/",
+          "meaning": "leasehold",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "press": {
       "meaning": "压、按、印刷",
       "words": [
-        { "word": "press", "phonetic": "/pres/", "meaning": "按；压；印刷", "freq": "high", "example": "Press the button." },
-        { "word": "express", "phonetic": "/ɪkˈspres/", "meaning": "表达；快速的", "freq": "high", "example": "Express your feelings." },
-        { "word": "impress", "phonetic": "/ɪmˈpres/", "meaning": "印象；打动", "freq": "high", "example": "She impressed everyone." },
-        { "word": "oppress", "phonetic": "/əˈpres/", "meaning": "压迫；欺压", "freq": "mid", "example": "The regime oppressed people." },
-        { "word": "suppress", "phonetic": "/səˈpres/", "meaning": "压制；抑制", "freq": "high", "example": "Suppress the rebellion." }
+        {
+          "word": "press",
+          "phonetic": "/pres/",
+          "meaning": "按；压；印刷",
+          "freq": "high",
+          "example": "Press the button."
+        },
+        {
+          "word": "express",
+          "phonetic": "/ɪkˈspres/",
+          "meaning": "表达；快速的",
+          "freq": "high",
+          "example": "Express your feelings."
+        },
+        {
+          "word": "impress",
+          "phonetic": "/ɪmˈpres/",
+          "meaning": "印象；打动",
+          "freq": "high",
+          "example": "She impressed everyone."
+        },
+        {
+          "word": "oppress",
+          "phonetic": "/əˈpres/",
+          "meaning": "压迫；欺压",
+          "freq": "mid",
+          "example": "The regime oppressed people."
+        },
+        {
+          "word": "suppress",
+          "phonetic": "/səˈpres/",
+          "meaning": "压制；抑制",
+          "freq": "high",
+          "example": "Suppress the rebellion."
+        },
+        {
+          "word": "pressing",
+          "phonetic": "/pressing/",
+          "meaning": "pressing",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "pressure",
+          "phonetic": "/pressure/",
+          "meaning": "pressure",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "compress",
+          "phonetic": "/compress/",
+          "meaning": "compress",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "compression",
+          "phonetic": "/compression/",
+          "meaning": "compression",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "compressor",
+          "phonetic": "/compressor/",
+          "meaning": "compressor",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "depress",
+          "phonetic": "/depress/",
+          "meaning": "depress",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "depression",
+          "phonetic": "/depression/",
+          "meaning": "depression",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "depressed",
+          "phonetic": "/depressed/",
+          "meaning": "depressed",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "depressing",
+          "phonetic": "/depressing/",
+          "meaning": "depressing",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "depressive",
+          "phonetic": "/depressive/",
+          "meaning": "depressive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "expression",
+          "phonetic": "/expression/",
+          "meaning": "expression",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "expressive",
+          "phonetic": "/expressive/",
+          "meaning": "expressive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "expressly",
+          "phonetic": "/expressly/",
+          "meaning": "expressly",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "impression",
+          "phonetic": "/impression/",
+          "meaning": "impression",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "impressive",
+          "phonetic": "/impressive/",
+          "meaning": "impressive",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "impressionable",
+          "phonetic": "/impressionable/",
+          "meaning": "impressionable",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "oppression",
+          "phonetic": "/oppression/",
+          "meaning": "oppression",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "oppressive",
+          "phonetic": "/oppressive/",
+          "meaning": "oppressive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "oppressor",
+          "phonetic": "/oppressor/",
+          "meaning": "oppressor",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "repress",
+          "phonetic": "/repress/",
+          "meaning": "repress",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "repression",
+          "phonetic": "/repression/",
+          "meaning": "repression",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "repressive",
+          "phonetic": "/repressive/",
+          "meaning": "repressive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "suppression",
+          "phonetic": "/suppression/",
+          "meaning": "suppression",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "suppressor",
+          "phonetic": "/suppressor/",
+          "meaning": "suppressor",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "compressible",
+          "phonetic": "/compressible/",
+          "meaning": "compressible",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "incompressible",
+          "phonetic": "/incompressible/",
+          "meaning": "incompressible",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "self-expression",
+          "phonetic": "/self-expression/",
+          "meaning": "self-expression",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "irrepressible",
+          "phonetic": "/irrepressible/",
+          "meaning": "irrepressible",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "seiz": {
       "meaning": "抓住、夺取、占据",
       "words": [
-        { "word": "seize", "phonetic": "/siːz/", "meaning": "抓住；夺取", "freq": "high", "example": "Seize the opportunity!" },
-        { "word": "possess", "phonetic": "/pəˈzes/", "meaning": "拥有；持有", "freq": "high", "example": "Do you possess a passport?" },
-        { "word": "disease", "phonetic": "/dɪˈziːz/", "meaning": "疾病；病症", "freq": "high", "example": "He has a serious disease." },
-        { "word": "displease", "phonetic": "/dɪsˈpliːz/", "meaning": "使不满；惹怒", "freq": "mid", "example": "Nothing displeased him." }
+        {
+          "word": "seize",
+          "phonetic": "/siːz/",
+          "meaning": "抓住；夺取",
+          "freq": "high",
+          "example": "Seize the opportunity!"
+        },
+        {
+          "word": "possess",
+          "phonetic": "/pəˈzes/",
+          "meaning": "拥有；持有",
+          "freq": "high",
+          "example": "Do you possess a passport?"
+        },
+        {
+          "word": "disease",
+          "phonetic": "/dɪˈziːz/",
+          "meaning": "疾病；病症",
+          "freq": "high",
+          "example": "He has a serious disease."
+        },
+        {
+          "word": "displease",
+          "phonetic": "/dɪsˈpliːz/",
+          "meaning": "使不满；惹怒",
+          "freq": "mid",
+          "example": "Nothing displeased him."
+        },
+        {
+          "word": "seizure",
+          "phonetic": "/seizure/",
+          "meaning": "seizure",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "seizing",
+          "phonetic": "/seizing/",
+          "meaning": "seizing",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "seized",
+          "phonetic": "/seized/",
+          "meaning": "seized",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "seizure",
+          "phonetic": "/seizure/",
+          "meaning": "seizure",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "seizures",
+          "phonetic": "/seizures/",
+          "meaning": "seizures",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "tain": {
       "meaning": "握住、保持、容纳",
       "words": [
-        { "word": "contain", "phonetic": "/kənˈteɪn/", "meaning": "包含；容纳", "freq": "high", "example": "This box contains books." },
-        { "word": "maintain", "phonetic": "/meɪnˈteɪn/", "meaning": "维持；保持", "freq": "high", "example": "Maintain your health." },
-        { "word": "obtain", "phonetic": "/əbˈteɪn/", "meaning": "获得；得到", "freq": "high", "example": "Obtain a permit." },
-        { "word": "sustain", "phonetic": "/səˈsteɪn/", "meaning": "支撑；维持", "freq": "high", "example": "The industry sustains jobs." },
-        { "word": "attain", "phonetic": "/əˈteɪn/", "meaning": "获得；达到", "freq": "high", "example": "Attain your goals." },
-        { "word": "detain", "phonetic": "/dɪˈteɪn/", "meaning": "拘留；扣留", "freq": "mid", "example": "The police detained the suspect." }
+        {
+          "word": "contain",
+          "phonetic": "/kənˈteɪn/",
+          "meaning": "包含；容纳",
+          "freq": "high",
+          "example": "This box contains books."
+        },
+        {
+          "word": "maintain",
+          "phonetic": "/meɪnˈteɪn/",
+          "meaning": "维持；保持",
+          "freq": "high",
+          "example": "Maintain your health."
+        },
+        {
+          "word": "obtain",
+          "phonetic": "/əbˈteɪn/",
+          "meaning": "获得；得到",
+          "freq": "high",
+          "example": "Obtain a permit."
+        },
+        {
+          "word": "sustain",
+          "phonetic": "/səˈsteɪn/",
+          "meaning": "支撑；维持",
+          "freq": "high",
+          "example": "The industry sustains jobs."
+        },
+        {
+          "word": "attain",
+          "phonetic": "/əˈteɪn/",
+          "meaning": "获得；达到",
+          "freq": "high",
+          "example": "Attain your goals."
+        },
+        {
+          "word": "detain",
+          "phonetic": "/dɪˈteɪn/",
+          "meaning": "拘留；扣留",
+          "freq": "mid",
+          "example": "The police detained the suspect."
+        },
+        {
+          "word": "tain",
+          "phonetic": "/tain/",
+          "meaning": "tain",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "container",
+          "phonetic": "/container/",
+          "meaning": "container",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "containment",
+          "phonetic": "/containment/",
+          "meaning": "containment",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "detainee",
+          "phonetic": "/detainee/",
+          "meaning": "detainee",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "detention",
+          "phonetic": "/detention/",
+          "meaning": "detention",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "maintenance",
+          "phonetic": "/maintenance/",
+          "meaning": "maintenance",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "maintainer",
+          "phonetic": "/maintainer/",
+          "meaning": "maintainer",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "obtainable",
+          "phonetic": "/obtainable/",
+          "meaning": "obtainable",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "obtainment",
+          "phonetic": "/obtainment/",
+          "meaning": "obtainment",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "retain",
+          "phonetic": "/retain/",
+          "meaning": "retain",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "retainer",
+          "phonetic": "/retainer/",
+          "meaning": "retainer",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "retention",
+          "phonetic": "/retention/",
+          "meaning": "retention",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "retentive",
+          "phonetic": "/retentive/",
+          "meaning": "retentive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "sustainable",
+          "phonetic": "/sustainable/",
+          "meaning": "sustainable",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "sustainability",
+          "phonetic": "/sustainability/",
+          "meaning": "sustainability",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "sustained",
+          "phonetic": "/sustained/",
+          "meaning": "sustained",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "abstain",
+          "phonetic": "/abstain/",
+          "meaning": "abstain",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "abstention",
+          "phonetic": "/abstention/",
+          "meaning": "abstention",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "abstainer",
+          "phonetic": "/abstainer/",
+          "meaning": "abstainer",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "pertain",
+          "phonetic": "/pertain/",
+          "meaning": "pertain",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "pertinent",
+          "phonetic": "/pertinent/",
+          "meaning": "pertinent",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "pertinence",
+          "phonetic": "/pertinence/",
+          "meaning": "pertinence",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "entertain",
+          "phonetic": "/entertain/",
+          "meaning": "entertain",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "entertainment",
+          "phonetic": "/entertainment/",
+          "meaning": "entertainment",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "entertainer",
+          "phonetic": "/entertainer/",
+          "meaning": "entertainer",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "entertaining",
+          "phonetic": "/entertaining/",
+          "meaning": "entertaining",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "attainment",
+          "phonetic": "/attainment/",
+          "meaning": "attainment",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "attainable",
+          "phonetic": "/attainable/",
+          "meaning": "attainable",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "tenacious",
+          "phonetic": "/tenacious/",
+          "meaning": "tenacious",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "tenacity",
+          "phonetic": "/tenacity/",
+          "meaning": "tenacity",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "tenant",
+          "phonetic": "/tenant/",
+          "meaning": "tenant",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     },
     "sens": {
       "meaning": "感觉、感受、意义",
       "words": [
-        { "word": "sense", "phonetic": "/sens/", "meaning": "感觉；感受；意义", "freq": "high", "example": "I sense danger." },
-        { "word": "sensible", "phonetic": "/ˈsensəbl/", "meaning": "明智的；合理的", "freq": "high", "example": "That's a sensible decision." },
-        { "word": "sensitive", "phonetic": "/ˈsensətɪv/", "meaning": "敏感的；灵敏的", "freq": "high", "example": "She is sensitive to criticism." },
-        { "word": "sensation", "phonetic": "/senˈseɪʃn/", "meaning": "感觉；知觉；轰动", "freq": "high", "example": "The news caused a sensation." },
-        { "word": "nonsense", "phonetic": "/ˈnɑːnsens/", "meaning": "废话；胡说", "freq": "high", "example": "That's complete nonsense." }
+        {
+          "word": "sense",
+          "phonetic": "/sens/",
+          "meaning": "感觉；感受；意义",
+          "freq": "high",
+          "example": "I sense danger."
+        },
+        {
+          "word": "sensible",
+          "phonetic": "/ˈsensəbl/",
+          "meaning": "明智的；合理的",
+          "freq": "high",
+          "example": "That's a sensible decision."
+        },
+        {
+          "word": "sensitive",
+          "phonetic": "/ˈsensətɪv/",
+          "meaning": "敏感的；灵敏的",
+          "freq": "high",
+          "example": "She is sensitive to criticism."
+        },
+        {
+          "word": "sensation",
+          "phonetic": "/senˈseɪʃn/",
+          "meaning": "感觉；知觉；轰动",
+          "freq": "high",
+          "example": "The news caused a sensation."
+        },
+        {
+          "word": "nonsense",
+          "phonetic": "/ˈnɑːnsens/",
+          "meaning": "废话；胡说",
+          "freq": "high",
+          "example": "That's complete nonsense."
+        },
+        {
+          "word": "sensitivity",
+          "phonetic": "/sensitivity/",
+          "meaning": "sensitivity",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "insensitive",
+          "phonetic": "/insensitive/",
+          "meaning": "insensitive",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "insensitivity",
+          "phonetic": "/insensitivity/",
+          "meaning": "insensitivity",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "sensory",
+          "phonetic": "/sensory/",
+          "meaning": "sensory",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "sensational",
+          "phonetic": "/sensational/",
+          "meaning": "sensational",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "sentence",
+          "phonetic": "/sentence/",
+          "meaning": "sentence",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "sentiment",
+          "phonetic": "/sentiment/",
+          "meaning": "sentiment",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "sentimental",
+          "phonetic": "/sentimental/",
+          "meaning": "sentimental",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "sentimentality",
+          "phonetic": "/sentimentality/",
+          "meaning": "sentimentality",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "consent",
+          "phonetic": "/consent/",
+          "meaning": "consent",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "dissent",
+          "phonetic": "/dissent/",
+          "meaning": "dissent",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "dissenter",
+          "phonetic": "/dissenter/",
+          "meaning": "dissenter",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "dissension",
+          "phonetic": "/dissension/",
+          "meaning": "dissension",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "resent",
+          "phonetic": "/resent/",
+          "meaning": "resent",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "resentment",
+          "phonetic": "/resentment/",
+          "meaning": "resentment",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "resentful",
+          "phonetic": "/resentful/",
+          "meaning": "resentful",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "present",
+          "phonetic": "/present/",
+          "meaning": "present",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "presentation",
+          "phonetic": "/presentation/",
+          "meaning": "presentation",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "presentable",
+          "phonetic": "/presentable/",
+          "meaning": "presentable",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "absent",
+          "phonetic": "/absent/",
+          "meaning": "absent",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "absence",
+          "phonetic": "/absence/",
+          "meaning": "absence",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "senseless",
+          "phonetic": "/senseless/",
+          "meaning": "senseless",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "sensibility",
+          "phonetic": "/sensibility/",
+          "meaning": "sensibility",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "extrasensory",
+          "phonetic": "/extrasensory/",
+          "meaning": "extrasensory",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "hypersensitive",
+          "phonetic": "/hypersensitive/",
+          "meaning": "hypersensitive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "photosensitive",
+          "phonetic": "/photosensitive/",
+          "meaning": "photosensitive",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "part": {
       "meaning": "部分、分开、参与",
       "words": [
-        { "word": "part", "phonetic": "/pɑːrt/", "meaning": "部分；零件；角色", "freq": "high", "example": "This is part of my collection." },
-        { "word": "party", "phonetic": "/ˈpɑːrti/", "meaning": "聚会；党派", "freq": "high", "example": "I went to a party." },
-        { "word": "partner", "phonetic": "/ˈpɑːrtnər/", "meaning": "伙伴；搭档", "freq": "high", "example": "He is my business partner." },
-        { "word": "depart", "phonetic": "/dɪˈpɑːrt/", "meaning": "出发；离开", "freq": "high", "example": "The train departs at 5 PM." },
-        { "word": "apartment", "phonetic": "/əˈpɑːrtmənt/", "meaning": "公寓；套房", "freq": "high", "example": "I live in an apartment." },
-        { "word": "participate", "phonetic": "/pɑːrˈtɪsɪpeɪt/", "meaning": "参加；参与", "freq": "high", "example": "Participate in class." }
+        {
+          "word": "part",
+          "phonetic": "/pɑːrt/",
+          "meaning": "部分；零件；角色",
+          "freq": "high",
+          "example": "This is part of my collection."
+        },
+        {
+          "word": "party",
+          "phonetic": "/ˈpɑːrti/",
+          "meaning": "聚会；党派",
+          "freq": "high",
+          "example": "I went to a party."
+        },
+        {
+          "word": "partner",
+          "phonetic": "/ˈpɑːrtnər/",
+          "meaning": "伙伴；搭档",
+          "freq": "high",
+          "example": "He is my business partner."
+        },
+        {
+          "word": "depart",
+          "phonetic": "/dɪˈpɑːrt/",
+          "meaning": "出发；离开",
+          "freq": "high",
+          "example": "The train departs at 5 PM."
+        },
+        {
+          "word": "apartment",
+          "phonetic": "/əˈpɑːrtmənt/",
+          "meaning": "公寓；套房",
+          "freq": "high",
+          "example": "I live in an apartment."
+        },
+        {
+          "word": "participate",
+          "phonetic": "/pɑːrˈtɪsɪpeɪt/",
+          "meaning": "参加；参与",
+          "freq": "high",
+          "example": "Participate in class."
+        },
+        {
+          "word": "partly",
+          "phonetic": "/partly/",
+          "meaning": "partly",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "partial",
+          "phonetic": "/partial/",
+          "meaning": "partial",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "partially",
+          "phonetic": "/partially/",
+          "meaning": "partially",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "impartial",
+          "phonetic": "/impartial/",
+          "meaning": "impartial",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "particle",
+          "phonetic": "/particle/",
+          "meaning": "particle",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "particular",
+          "phonetic": "/particular/",
+          "meaning": "particular",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "particularly",
+          "phonetic": "/particularly/",
+          "meaning": "particularly",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "particularity",
+          "phonetic": "/particularity/",
+          "meaning": "particularity",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "partition",
+          "phonetic": "/partition/",
+          "meaning": "partition",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "partisan",
+          "phonetic": "/partisan/",
+          "meaning": "partisan",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "partisanship",
+          "phonetic": "/partisanship/",
+          "meaning": "partisanship",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "partnership",
+          "phonetic": "/partnership/",
+          "meaning": "partnership",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "partake",
+          "phonetic": "/partake/",
+          "meaning": "partake",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "participant",
+          "phonetic": "/participant/",
+          "meaning": "participant",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "participation",
+          "phonetic": "/participation/",
+          "meaning": "participation",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "participatory",
+          "phonetic": "/participatory/",
+          "meaning": "participatory",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "apart",
+          "phonetic": "/apart/",
+          "meaning": "apart",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "apartheid",
+          "phonetic": "/apartheid/",
+          "meaning": "apartheid",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "departure",
+          "phonetic": "/departure/",
+          "meaning": "departure",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "department",
+          "phonetic": "/department/",
+          "meaning": "department",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "departmental",
+          "phonetic": "/departmental/",
+          "meaning": "departmental",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "impart",
+          "phonetic": "/impart/",
+          "meaning": "impart",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "impartiality",
+          "phonetic": "/impartiality/",
+          "meaning": "impartiality",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "counterpart",
+          "phonetic": "/counterpart/",
+          "meaning": "counterpart",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "repartee",
+          "phonetic": "/repartee/",
+          "meaning": "repartee",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "bipartisan",
+          "phonetic": "/bipartisan/",
+          "meaning": "bipartisan",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "compartment",
+          "phonetic": "/compartment/",
+          "meaning": "compartment",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "compartmentalize",
+          "phonetic": "/compartmentalize/",
+          "meaning": "compartmentalize",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "partitive",
+          "phonetic": "/partitive/",
+          "meaning": "partitive",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "participle",
+          "phonetic": "/participle/",
+          "meaning": "participle",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "particle",
+          "phonetic": "/particle/",
+          "meaning": "particle",
+          "freq": "low",
+          "example": ""
+        }
       ]
     },
     "pass": {
       "meaning": "通过、经过、走过",
       "words": [
-        { "word": "pass", "phonetic": "/pæs/", "meaning": "通过；及格；传递", "freq": "high", "example": "Pass the test." },
-        { "word": "passage", "phonetic": "/ˈpæsɪdʒ/", "meaning": "通道；段落", "freq": "high", "example": "Read this passage." },
-        { "word": "passenger", "phonetic": "/ˈpæsɪndʒər/", "meaning": "乘客；旅客", "freq": "high", "example": "The passenger got on the bus." },
-        { "word": "compass", "phonetic": "/ˈkʌmpəs/", "meaning": "指南针；范围", "freq": "high", "example": "Use a compass to navigate." },
-        { "word": "passion", "phonetic": "/ˈpæʃn/", "meaning": "激情；热爱", "freq": "high", "example": "He has a passion for music." }
+        {
+          "word": "pass",
+          "phonetic": "/pæs/",
+          "meaning": "通过；及格；传递",
+          "freq": "high",
+          "example": "Pass the test."
+        },
+        {
+          "word": "passage",
+          "phonetic": "/ˈpæsɪdʒ/",
+          "meaning": "通道；段落",
+          "freq": "high",
+          "example": "Read this passage."
+        },
+        {
+          "word": "passenger",
+          "phonetic": "/ˈpæsɪndʒər/",
+          "meaning": "乘客；旅客",
+          "freq": "high",
+          "example": "The passenger got on the bus."
+        },
+        {
+          "word": "compass",
+          "phonetic": "/ˈkʌmpəs/",
+          "meaning": "指南针；范围",
+          "freq": "high",
+          "example": "Use a compass to navigate."
+        },
+        {
+          "word": "passion",
+          "phonetic": "/ˈpæʃn/",
+          "meaning": "激情；热爱",
+          "freq": "high",
+          "example": "He has a passion for music."
+        },
+        {
+          "word": "passport",
+          "phonetic": "/ˈpɑːspɔːrt/",
+          "meaning": "passport",
+          "freq": "high",
+          "example": "Show your passport at customs."
+        },
+        {
+          "word": "password",
+          "phonetic": "/password/",
+          "meaning": "password",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "passable",
+          "phonetic": "/passable/",
+          "meaning": "passable",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "impassable",
+          "phonetic": "/impassable/",
+          "meaning": "impassable",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "passing",
+          "phonetic": "/passing/",
+          "meaning": "passing",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "passerby",
+          "phonetic": "/passerby/",
+          "meaning": "passerby",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "passive",
+          "phonetic": "/passive/",
+          "meaning": "passive",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "passivity",
+          "phonetic": "/passivity/",
+          "meaning": "passivity",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "passionate",
+          "phonetic": "/passionate/",
+          "meaning": "passionate",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "passionately",
+          "phonetic": "/passionately/",
+          "meaning": "passionately",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "passionless",
+          "phonetic": "/passionless/",
+          "meaning": "passionless",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "compassion",
+          "phonetic": "/compassion/",
+          "meaning": "compassion",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "compassionate",
+          "phonetic": "/compassionate/",
+          "meaning": "compassionate",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "impassive",
+          "phonetic": "/impassive/",
+          "meaning": "impassive",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "impassively",
+          "phonetic": "/impassively/",
+          "meaning": "impassively",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "surpass",
+          "phonetic": "/surpass/",
+          "meaning": "surpass",
+          "freq": "high",
+          "example": ""
+        },
+        {
+          "word": "surpassing",
+          "phonetic": "/surpassing/",
+          "meaning": "surpassing",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "trespass",
+          "phonetic": "/trespass/",
+          "meaning": "trespass",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "trespasser",
+          "phonetic": "/trespasser/",
+          "meaning": "trespasser",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "trespassing",
+          "phonetic": "/trespassing/",
+          "meaning": "trespassing",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "overpass",
+          "phonetic": "/overpass/",
+          "meaning": "overpass",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "underpass",
+          "phonetic": "/underpass/",
+          "meaning": "underpass",
+          "freq": "low",
+          "example": ""
+        },
+        {
+          "word": "bypass",
+          "phonetic": "/bypass/",
+          "meaning": "bypass",
+          "freq": "mid",
+          "example": ""
+        },
+        {
+          "word": "encompass",
+          "phonetic": "/encompass/",
+          "meaning": "encompass",
+          "freq": "mid",
+          "example": ""
+        }
       ]
     }
   }
