@@ -449,13 +449,49 @@ function toggleDark() {
 }
 
 // ===== TTS 读音 =====
-function speak(text) {
-  if(!window.speechSynthesis) { alert('浏览器不支持语音'); return; }
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'en-US'; u.rate = 0.85; u.pitch = 1;
-  window.speechSynthesis.speak(u);
+let speechReady = false;
+function initSpeech() {
+  if(window.speechSynthesis) {
+    speechReady = true;
+    // 某些浏览器（如iOS Safari）需要用户交互后才能使用语音
+    window.speechSynthesis.getVoices();
+  }
 }
+function speak(text) {
+  try {
+    if(!window.speechSynthesis) { fallbackSpeak(text); return; }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = 0.82;
+    u.pitch = 1;
+    // 选择Google语音（如果可用）
+    const voices = window.speechSynthesis.getVoices();
+    const preferred = voices.find(v => v.name.includes('Google') && v.lang.startsWith('en'));
+    if(preferred) u.voice = preferred;
+    window.speechSynthesis.speak(u);
+  } catch(e) {
+    fallbackSpeak(text);
+  }
+}
+// 降级方案：用外部TTS API
+function fallbackSpeak(text) {
+  const url = 'https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=en&client=gtx&q=' + encodeURIComponent(text);
+  const audio = new Audio(url);
+  audio.play().catch(function() {
+    // 如果自动播放被阻止，提示用户点击
+    alert('请点击页面任意位置后重试读音，或手动点击播放按钮');
+  });
+}
+// 页面加载时初始化语音
+document.addEventListener('DOMContentLoaded', initSpeech);
+// 用户首次点击时确保语音可用
+document.addEventListener('click', function() {
+  if(!speechReady && window.speechSynthesis) {
+    speechReady = true;
+    window.speechSynthesis.getVoices();
+  }
+}, {once: true});
 
 // ===== 启动 =====
 loadData();
