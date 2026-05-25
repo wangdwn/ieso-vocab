@@ -468,16 +468,24 @@ document.addEventListener('click', function() {
 
 function speak(text) {
   if(!text) return;
-  // 直接用Google TTS API
-  playGoogleTTS(text);
-}
-
-function playGoogleTTS(text) {
-  const url = 'https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=en&client=gtx&q=' + encodeURIComponent(text.substring(0, 100));
-  const audio = new Audio(url);
-  audio.volume = 1.0;
-  audio.play().catch(function(err) {
-    console.warn('TTS blocked, needs user interaction first');
+  // 创建audio元素来播放
+  const audio = document.createElement('audio');
+  audio.style.display = 'none';
+  audio.controls = false;
+  audio.src = 'https://translate.googleapis.com/translate_tts?ie=UTF-8&tl=en&client=gtx&q=' + encodeURIComponent(text.substring(0, 100));
+  document.body.appendChild(audio);
+  audio.play().then(function() {
+    audio.onended = function() { document.body.removeChild(audio); };
+  }).catch(function(err) {
+    document.body.removeChild(audio);
+    console.warn('TTS blocked:', err);
+    // 终极降级：用Web Speech API
+    if(window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-US'; u.rate = 0.85;
+      window.speechSynthesis.speak(u);
+    }
   });
 }
 
