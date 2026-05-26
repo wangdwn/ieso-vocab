@@ -337,7 +337,8 @@ function showRoot(key) {
   document.getElementById('panel-header').innerHTML =
     '<span class="emoji">🔤</span>' +
     '<div class="root-name">'+key+'</div>' +
-    '<div class="root-meaning">'+root.meaning+'</div>';
+    '<div class="root-meaning">'+root.meaning+'</div>' +
+    '<button class="study-start-btn" onclick="event.stopPropagation();enterStudyMode(\''+key+'\')">🎯 开始学习</button>';
   
   const freqMap = {high:'高频', mid:'中频', low:'低频'};
   document.getElementById('word-list').innerHTML = root.words.map((w, idx) => {
@@ -579,22 +580,6 @@ function nextCard(key) {
     se.innerHTML='<div class="study-header"><div class="study-header-left"><button class="study-btn" onclick="document.getElementById(\'study-panel\').classList.remove(\'open\');document.getElementById(\'overlay\').classList.remove(\'show\')">← 返回</button><span class="study-title">🎉 完成！</span></div></div><div class="study-complete"><div class="study-complete-icon">🎉</div><div class="study-complete-title">'+key+' 学习完成！</div><div class="study-complete-stats"><span>📚 学习了 '+studyWords.length+' 个单词</span><span>🔥 连续打卡 '+(today.streak||DB.get('streak',0))+' 天</span></div><button class="study-btn study-btn-primary" onclick="document.getElementById(\'study-panel\').classList.remove(\'open\');document.getElementById(\'overlay\').classList.remove(\'show\')">返回词根</button></div>';
   }
 }
-
-// 增强 showRoot：加上"开始学习"按钮
-const _origShowRoot = showRoot;
-showRoot = function(key) {
-  _origShowRoot(key);
-  setTimeout(()=>{
-    const h=document.getElementById('panel-header');
-    if(h&&!document.querySelector('.study-start-btn')){
-      const btn=document.createElement('button');
-      btn.className='study-start-btn';
-      btn.textContent='🎯 开始学习';
-      btn.onclick=function(e){e.stopPropagation();enterStudyMode(key)};
-      h.appendChild(btn);
-    }
-  },50);
-};
 
 // 注入CSS
 (function(){
