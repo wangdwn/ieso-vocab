@@ -498,6 +498,14 @@ function toggleDark() {
 // ===== 启动 =====
 loadData();
 
+// ===== 注入增强功能（卡片学习+进度+收藏） =====
+(function() {
+  const s = document.createElement('script');
+  s.src = './vocab-enhance.js';
+  s.onload = function() { console.log('✓ 增强功能已加载'); };
+  document.body.appendChild(s);
+})();
+
 document.addEventListener('keydown', e => {
   if(e.key === 'Escape') closePanel();
   if(e.ctrlKey && e.key === 'k') { e.preventDefault(); document.getElementById('search-input').focus(); }
