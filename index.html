@@ -126,7 +126,31 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
 .detail-panel .panel-header .emoji{font-size:36px;display:block;margin-bottom:8px;}
 .detail-panel .panel-header .root-name{font-size:24px;font-weight:800;letter-spacing:-0.5px;}
 .detail-panel .panel-header .root-meaning{font-size:14px;color:var(--text-secondary);margin-top:4px;}
-.word-list{display:flex;flex-direction:column;gap:8px;}
+/* 情景阅读 - 标签切换 */
+.panel-tabs{display:flex;gap:6px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.06)}
+.panel-tab{padding:5px 12px;border-radius:18px;border:none;background:none;font-size:12px;font-weight:500;cursor:pointer;color:var(--text-secondary);transition:all 0.2s}
+.panel-tab.active{background:var(--accent);color:#fff}
+.panel-tab:hover:not(.active){background:rgba(0,113,227,0.08)}
+/* 阅读文章 */
+.reading-content{padding:4px 0;display:none}
+.reading-content.show{display:block}
+.reading-passage{font-size:14px;line-height:2;color:var(--text);margin-bottom:16px}
+.reading-passage .vocab-word{font-weight:700;color:var(--accent);cursor:pointer;border-bottom:1.5px dotted var(--accent);padding:0 1px;position:relative;display:inline-block}
+.reading-passage .vocab-word:hover{background:rgba(0,113,227,0.08);border-radius:3px}
+.vocab-tooltip{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#1d1d1f;color:#f5f5f7;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:400;white-space:nowrap;z-index:10;pointer-events:none;opacity:0;transition:opacity 0.15s}
+.vocab-word:hover .vocab-tooltip{opacity:1}
+.reading-words-used{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.reading-word-tag{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:500;background:rgba(0,113,227,0.08);color:var(--accent)}
+.reading-questions{background:rgba(0,113,227,0.03);border-radius:12px;padding:14px}
+.reading-questions h4{font-size:13px;font-weight:600;margin-bottom:10px;color:var(--text)}
+.reading-question{margin-bottom:10px}
+.reading-question .q{font-size:13px;font-weight:500;margin-bottom:4px}
+.reading-question .a{font-size:12px;color:var(--text-secondary);display:none;padding:8px;background:rgba(0,0,0,0.02);border-radius:8px;margin-top:4px;line-height:1.5}
+.reading-question .a.show{display:block}
+.reveal-btn{font-size:11px;color:var(--accent);cursor:pointer;background:none;border:none;padding:0;margin-top:2px;font-weight:500}
+.no-reading{text-align:center;padding:30px 10px;color:var(--text-tertiary);font-size:13px}
+.no-reading .icon{font-size:36px;margin-bottom:8px}
+.word-list{display:flex;flex-direction:column;gap:8px}
 .word-item{
   background:rgba(255,255,255,0.5);border-radius:12px;padding:12px 14px;
   transition:all 0.2s;cursor:pointer;position:relative;
@@ -346,7 +370,12 @@ footer a{color:var(--accent);text-decoration:none;}
 <div class="detail-panel" id="detail-panel">
   <button class="close" onclick="closePanel()">✕</button>
   <div class="panel-header" id="panel-header"></div>
+  <div class="panel-tabs" id="panel-tabs" style="display:none">
+    <button class="panel-tab active" onclick="switchTab('words')">📝 单词列表</button>
+    <button class="panel-tab" onclick="switchTab('reading')">📖 情景阅读</button>
+  </div>
   <div class="word-list" id="word-list"></div>
+  <div class="reading-content" id="reading-content"></div>
 </div>
 
 <footer>
@@ -737,6 +766,144 @@ document.addEventListener('keydown', e => {
   if(e.key === 'Escape') closePanel();
   if(e.ctrlKey && e.key === 'k') { e.preventDefault(); document.getElementById('search-input').focus(); }
 });
+
+// ===== 情景阅读模块 =====
+let readingData = null;
+const rootToPassage = {}; // root_key -> passage_id
+
+async function loadReadingData() {
+  try {
+    const resp = await fetch('./reading-passages.json');
+    readingData = await resp.json();
+    // Build root → passage mapping
+    (readingData.themes || []).forEach(theme => {
+      (theme.roots || []).forEach(root => {
+        rootToPassage[root] = theme.id;
+      });
+    });
+  } catch(e) {
+    console.log('Reading data not loaded:', e.message);
+  }
+}
+
+function getPassageForRoot(rootKey) {
+  if (!readingData) return null;
+  const passageId = rootToPassage[rootKey];
+  if (!passageId) return null;
+  return readingData.passages[passageId] || null;
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.panel-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.panel-tab').forEach(b => {
+    if (b.textContent.includes(tab === 'words' ? '单词' : '阅读')) b.classList.add('active');
+  });
+  
+  const wordList = document.getElementById('word-list');
+  const readingContent = document.getElementById('reading-content');
+  
+  if (tab === 'words') {
+    wordList.style.display = 'flex';
+    readingContent.classList.remove('show');
+  } else {
+    wordList.style.display = 'none';
+    readingContent.classList.add('show');
+    if (currentRoot) renderReading(currentRoot);
+  }
+}
+
+function renderReading(rootKey) {
+  const container = document.getElementById('reading-content');
+  const passage = getPassageForRoot(rootKey);
+  
+  if (!passage) {
+    container.innerHTML = `
+      <div class="no-reading">
+        <div class="icon">📚</div>
+        <p>该词根暂无情景阅读文章</p>
+        <p style="font-size:11px;margin-top:4px">我们正在持续添加更多主题文章</p>
+      </div>`;
+    return;
+  }
+  
+  // Get word meanings for tooltips
+  const root = vocabData.roots[rootKey];
+  const wordMeanings = {};
+  if (root) {
+    root.words.forEach(w => { wordMeanings[w.word.toLowerCase()] = w.meaning; });
+  }
+  // Also look up across all covered roots
+  if (passage.roots_covered) {
+    passage.roots_covered.forEach(rk => {
+      const r = vocabData.roots[rk];
+      if (r) r.words.forEach(w => { wordMeanings[w.word.toLowerCase()] = w.meaning; });
+    });
+  }
+  
+  // Bold the vocab words in passage
+  let text = passage.passage;
+  const usedWords = passage.words_used || [];
+  usedWords.forEach(w => {
+    const regex = new RegExp('\\b(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\b', 'gi');
+    text = text.replace(regex, (match) => {
+      const meaning = wordMeanings[match.toLowerCase()] || '';
+      return '<span class="vocab-word">' + match + 
+        (meaning ? '<span class="vocab-tooltip">' + meaning + '</span>' : '') + 
+        '</span>';
+    });
+  });
+  
+  const questionsHTML = (passage.questions || []).map((q, i) => `
+    <div class="reading-question">
+      <div class="q">${i+1}. ${q.q}</div>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show');this.style.display='none'">显示答案</button>
+      <div class="a">${q.a}</div>
+    </div>
+  `).join('');
+  
+  container.innerHTML = `
+    <div class="reading-passage">${text}</div>
+    <div class="reading-words-used">
+      ${usedWords.map(w => '<span class="reading-word-tag">' + w + '</span>').join('')}
+    </div>
+    <div class="reading-questions">
+      <h4>📝 阅读理解</h4>
+      ${questionsHTML}
+    </div>
+  `;
+}
+
+// 修改showRoot：检测是否有阅读文章，有则显示标签栏
+const _originalShowRoot = showRoot;
+showRoot = function(key) {
+  _originalShowRoot(key);
+  
+  const hasPassage = !!getPassageForRoot(key);
+  const tabs = document.getElementById('panel-tabs');
+  if (hasPassage) {
+    tabs.style.display = 'flex';
+    // Reset to words tab
+    document.querySelectorAll('.panel-tab').forEach(b => b.classList.remove('active'));
+    tabs.querySelector('.panel-tab').classList.add('active');
+    document.getElementById('word-list').style.display = 'flex';
+    document.getElementById('reading-content').classList.remove('show');
+  } else {
+    tabs.style.display = 'none';
+    document.getElementById('word-list').style.display = 'flex';
+    document.getElementById('reading-content').classList.remove('show');
+  }
+};
+
+// 修改closePanel：重置标签状态
+const _originalClosePanel = closePanel;
+closePanel = function() {
+  _originalClosePanel();
+  document.getElementById('word-list').style.display = 'flex';
+  document.getElementById('reading-content').classList.remove('show');
+};
+
+// 加载阅读数据
+loadReadingData();
 </script>
 </body>
 </html>
