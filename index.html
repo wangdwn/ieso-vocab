@@ -966,11 +966,23 @@ closePanel = function() {
   document.getElementById('reading-content').classList.remove('show');
 };
 
-// 加载阅读数据（异步，完成后渲染卡片）
-(async function() {
-  await loadReadingData();
-  renderReadingCards();
+// 加载阅读数据（同步，数据已内嵌）
+(function() {
+  readingData = window.__READING_DATA__;
+  // Build root → passage mapping
+  (readingData.themes || []).forEach(theme => {
+    (theme.roots || []).forEach(root => {
+      rootToPassage[root] = theme.id;
+    });
+  });
 })();
+
+// 延迟渲染：等vocabData加载完成后渲染卡片
+const _origInit = init;
+init = function() {
+  _origInit();
+  renderReadingCards();
+};
 
 // ===== 主页情景阅读卡片 =====
 function renderReadingCards() {
