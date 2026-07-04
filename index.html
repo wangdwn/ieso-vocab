@@ -961,8 +961,11 @@ closePanel = function() {
   document.getElementById('reading-content').classList.remove('show');
 };
 
-// 加载阅读数据
-loadReadingData();
+// 加载阅读数据（异步，完成后渲染卡片）
+(async function() {
+  await loadReadingData();
+  renderReadingCards();
+})();
 
 // ===== 主页情景阅读卡片 =====
 function renderReadingCards() {
@@ -1055,13 +1058,6 @@ document.addEventListener('keydown', e => {
   }
   if(e.ctrlKey && e.key === 'k') { e.preventDefault(); document.getElementById('search-input').focus(); }
 });
-
-// 重新定义loadReadingData以包含卡片渲染
-const _origLoadReadingData = loadReadingData;
-loadReadingData = async function() {
-  await _origLoadReadingData();
-  renderReadingCards();
-};
 </script>
 </body>
 </html>
