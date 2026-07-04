@@ -975,14 +975,9 @@ closePanel = function() {
       rootToPassage[root] = theme.id;
     });
   });
-})();
-
-// 延迟渲染：等vocabData加载完成后渲染卡片
-const _origInit = init;
-init = function() {
-  _origInit();
+  // 直接渲染卡片——不依赖vocabData
   renderReadingCards();
-};
+})();
 
 // ===== 主页情景阅读卡片 =====
 function renderReadingCards() {
