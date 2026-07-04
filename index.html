@@ -1048,59 +1048,54 @@ closePanel = function() {
 
 
 function openReadingModal(themeId) {
-  if (!readingData) return;
-  const passage = readingData.passages[themeId];
+  var rd = window.__READING_DATA__;
+  if (!rd) return;
+  var passage = rd.passages[themeId];
   if (!passage) return;
   
-  // Get word meanings
-  const wordMeanings = {};
-  (passage.roots_covered || []).forEach(rk => {
-    const r = vocabData.roots[rk];
-    if (r) r.words.forEach(w => { wordMeanings[w.word.toLowerCase()] = w.meaning; });
+  // Build word meanings from vocabData
+  var wordMeanings = {};
+  (passage.roots_covered || []).forEach(function(rk) {
+    var r = vocabData.roots[rk];
+    if (r) r.words.forEach(function(w) { wordMeanings[w.word.toLowerCase()] = w.meaning; });
   });
   
-  let text = passage.passage;
-  (passage.words_used || []).forEach(w => {
-    const regex = new RegExp('\\\\b(' + w.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + ')\\\\b', 'gi');
-    text = text.replace(regex, (match) => {
-      const meaning = wordMeanings[match.toLowerCase()] || '';
+  // Highlight vocab words in passage
+  var text = passage.passage;
+  (passage.words_used || []).forEach(function(w) {
+    var escaped = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    var regex = new RegExp('\\b(' + escaped + ')\\b', 'gi');
+    text = text.replace(regex, function(match) {
+      var meaning = wordMeanings[match.toLowerCase()] || '';
       return '<span class="vocab-word">' + match + 
         (meaning ? '<span class="vocab-tooltip">' + meaning + '</span>' : '') + 
         '</span>';
     });
   });
   
-  const questionsHTML = (passage.questions || []).map((q, i) => `
-    <div class="reading-question">
-      <div class="q">${i+1}. ${q.q}</div>
-      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show');this.style.display='none'">显示答案</button>
-      <div class="a">${q.a}</div>
-    </div>
-  `).join('');
+  var questionsHTML = (passage.questions || []).map(function(q, i) {
+    return '<div class="reading-question"><div class="q">' + (i+1) + '. ' + q.q + '</div>' +
+      '<button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle(\'show\');this.style.display=\'none\'">显示答案</button>' +
+      '<div class="a">' + q.a + '</div></div>';
+  }).join('');
   
-  // Find theme info
-  const theme = (readingData.themes || []).find(t => t.id === themeId);
+  var theme = (rd.themes || []).find(function(t) { return t.id === themeId; });
   
-  document.getElementById('rm-content').innerHTML = `
-    <button class="rm-close" onclick="closeReadingModal()">✕</button>
-    <h3 style="font-size:20px;font-weight:800;margin-bottom:6px;letter-spacing:-0.3px">
-      ${theme ? theme.icon : '📖'} ${passage.title}
-    </h3>
-    <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:20px">
-      ${theme ? theme.title_cn + ' · ' : ''}词根：${(passage.roots_covered||[]).join(' · ')}
-    </p>
-    <div class="reading-passage">${text}</div>
-    <div class="reading-words-used">
-      ${(passage.words_used||[]).map(w => '<span class="reading-word-tag">' + w + '</span>').join('')}
-    </div>
-    <div class="reading-questions">
-      <h4>📝 阅读理解</h4>
-      ${questionsHTML}
-    </div>
-  `;
+  document.getElementById('rm-content').innerHTML = 
+    '<button class="rm-close" onclick="closeReadingModal()">✕</button>' +
+    '<h3 style="font-size:20px;font-weight:800;margin-bottom:6px;letter-spacing:-0.3px">' +
+    (theme ? theme.icon : '📖') + ' ' + passage.title + '</h3>' +
+    '<p style="font-size:12px;color:var(--text-tertiary);margin-bottom:20px">' +
+    (theme ? theme.title_cn + ' · ' : '') + '词根：' + (passage.roots_covered||[]).join(' · ') + '</p>' +
+    '<div class="reading-passage">' + text + '</div>' +
+    '<div class="reading-words-used">' +
+    (passage.words_used||[]).map(function(w) { return '<span class="reading-word-tag">' + w + '</span>'; }).join('') +
+    '</div>' +
+    '<div class="reading-questions"><h4>📝 阅读理解</h4>' + questionsHTML + '</div>';
   
   document.getElementById('reading-modal').classList.add('show');
 }
+
 
 function closeReadingModal() {
   document.getElementById('reading-modal').classList.remove('show');
