@@ -150,6 +150,51 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
 .reveal-btn{font-size:11px;color:var(--accent);cursor:pointer;background:none;border:none;padding:0;margin-top:2px;font-weight:500}
 .no-reading{text-align:center;padding:30px 10px;color:var(--text-tertiary);font-size:13px}
 .no-reading .icon{font-size:36px;margin-bottom:8px}
+/* 主页情景阅读卡片 */
+.reading-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.reading-card{
+  background:var(--card-bg);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--card-border);border-radius:var(--radius);
+  padding:18px;cursor:pointer;transition:all 0.25s cubic-bezier(0.25,0.1,0.25,1);
+  box-shadow:var(--shadow);
+}
+.reading-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover);border-color:var(--accent)}
+.reading-card .rc-icon{font-size:32px;margin-bottom:10px}
+.reading-card .rc-title{font-size:15px;font-weight:700;margin-bottom:4px;letter-spacing:-0.2px}
+.reading-card .rc-roots{font-size:12px;color:var(--accent);font-weight:500;margin-bottom:8px}
+.reading-card .rc-desc{font-size:12px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.reading-card .rc-badge{display:inline-block;font-size:10px;background:var(--accent);color:#fff;padding:2px 8px;border-radius:10px;margin-top:8px;font-weight:500}
+/* 独立阅读弹窗 */
+.reading-modal{
+  position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity 0.3s;
+}
+.reading-modal.show{opacity:1;pointer-events:auto}
+.reading-modal .rm-backdrop{
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.3);backdrop-filter:blur(4px);
+}
+.reading-modal .rm-content{
+  position:relative;background:var(--card-bg);backdrop-filter:blur(40px);
+  -webkit-backdrop-filter:blur(40px);
+  border:1px solid var(--card-border);border-radius:20px;
+  padding:28px;max-width:600px;width:90%;max-height:80vh;
+  overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.15);
+}
+.reading-modal .rm-close{
+  position:absolute;top:16px;right:16px;
+  width:28px;height:28px;border-radius:50%;
+  border:none;background:rgba(0,0,0,0.06);cursor:pointer;
+  font-size:16px;display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s;
+}
+.reading-modal .rm-close:hover{background:rgba(0,0,0,0.12)}
+@media(prefers-color-scheme:dark){
+  .reading-modal .rm-close{background:rgba(255,255,255,0.1)}
+  .reading-modal .rm-close:hover{background:rgba(255,255,255,0.2)}
+}
 .word-list{display:flex;flex-direction:column;gap:8px}
 .word-item{
   background:rgba(255,255,255,0.5);border-radius:12px;padding:12px 14px;
@@ -357,6 +402,14 @@ footer a{color:var(--accent);text-decoration:none;}
     <div class="root-grid" id="root-grid"></div>
   </div>
 
+  <div class="section" id="reading-section" style="display:none">
+    <div class="section-header">
+      <h2>📖 情景阅读</h2>
+      <span class="count">10篇主题文章 · 词根串联记忆</span>
+    </div>
+    <div class="reading-grid" id="reading-grid"></div>
+  </div>
+
   <div class="mindmap-section" id="mindmap">
     <h2>🧠 词根思维导图</h2>
     <div class="mindmap-container">
@@ -376,6 +429,12 @@ footer a{color:var(--accent);text-decoration:none;}
   </div>
   <div class="word-list" id="word-list"></div>
   <div class="reading-content" id="reading-content"></div>
+</div>
+
+<!-- 独立阅读弹窗 -->
+<div class="reading-modal" id="reading-modal">
+  <div class="rm-backdrop" onclick="closeReadingModal()"></div>
+  <div class="rm-content" id="rm-content"></div>
 </div>
 
 <footer>
@@ -904,6 +963,105 @@ closePanel = function() {
 
 // 加载阅读数据
 loadReadingData();
+
+// ===== 主页情景阅读卡片 =====
+function renderReadingCards() {
+  if (!readingData) return;
+  const themes = readingData.themes || [];
+  const section = document.getElementById('reading-section');
+  const grid = document.getElementById('reading-grid');
+  
+  if (themes.length === 0) return;
+  section.style.display = 'block';
+  
+  grid.innerHTML = themes.map(t => {
+    const passage = readingData.passages[t.id];
+    const desc = passage ? passage.passage.replace(/<[^>]+>/g,'').substring(0, 60) + '...' : '';
+    const wordCount = passage ? passage.word_count : 0;
+    return `
+      <div class="reading-card" onclick="openReadingModal('${t.id}')">
+        <div class="rc-icon">${t.icon}</div>
+        <div class="rc-title">${passage ? passage.title : t.title_cn}</div>
+        <div class="rc-roots">词根：${(t.roots||[]).join(' · ')}</div>
+        <div class="rc-desc">${desc}</div>
+        <span class="rc-badge">${wordCount}词 · ${t.title_cn}</span>
+      </div>`;
+  }).join('');
+}
+
+function openReadingModal(themeId) {
+  if (!readingData) return;
+  const passage = readingData.passages[themeId];
+  if (!passage) return;
+  
+  // Get word meanings
+  const wordMeanings = {};
+  (passage.roots_covered || []).forEach(rk => {
+    const r = vocabData.roots[rk];
+    if (r) r.words.forEach(w => { wordMeanings[w.word.toLowerCase()] = w.meaning; });
+  });
+  
+  let text = passage.passage;
+  (passage.words_used || []).forEach(w => {
+    const regex = new RegExp('\\\\b(' + w.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + ')\\\\b', 'gi');
+    text = text.replace(regex, (match) => {
+      const meaning = wordMeanings[match.toLowerCase()] || '';
+      return '<span class="vocab-word">' + match + 
+        (meaning ? '<span class="vocab-tooltip">' + meaning + '</span>' : '') + 
+        '</span>';
+    });
+  });
+  
+  const questionsHTML = (passage.questions || []).map((q, i) => `
+    <div class="reading-question">
+      <div class="q">${i+1}. ${q.q}</div>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show');this.style.display='none'">显示答案</button>
+      <div class="a">${q.a}</div>
+    </div>
+  `).join('');
+  
+  // Find theme info
+  const theme = (readingData.themes || []).find(t => t.id === themeId);
+  
+  document.getElementById('rm-content').innerHTML = `
+    <button class="rm-close" onclick="closeReadingModal()">✕</button>
+    <h3 style="font-size:20px;font-weight:800;margin-bottom:6px;letter-spacing:-0.3px">
+      ${theme ? theme.icon : '📖'} ${passage.title}
+    </h3>
+    <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:20px">
+      ${theme ? theme.title_cn + ' · ' : ''}词根：${(passage.roots_covered||[]).join(' · ')}
+    </p>
+    <div class="reading-passage">${text}</div>
+    <div class="reading-words-used">
+      ${(passage.words_used||[]).map(w => '<span class="reading-word-tag">' + w + '</span>').join('')}
+    </div>
+    <div class="reading-questions">
+      <h4>📝 阅读理解</h4>
+      ${questionsHTML}
+    </div>
+  `;
+  
+  document.getElementById('reading-modal').classList.add('show');
+}
+
+function closeReadingModal() {
+  document.getElementById('reading-modal').classList.remove('show');
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeReadingModal();
+    closePanel();
+  }
+  if(e.ctrlKey && e.key === 'k') { e.preventDefault(); document.getElementById('search-input').focus(); }
+});
+
+// 重新定义loadReadingData以包含卡片渲染
+const _origLoadReadingData = loadReadingData;
+loadReadingData = async function() {
+  await _origLoadReadingData();
+  renderReadingCards();
+};
 </script>
 </body>
 </html>
