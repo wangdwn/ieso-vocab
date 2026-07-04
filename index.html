@@ -195,6 +195,16 @@ main{padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px;}
   .reading-modal .rm-close{background:rgba(255,255,255,0.1)}
   .reading-modal .rm-close:hover{background:rgba(255,255,255,0.2)}
 }
+/* 中英切换 */
+.lang-toggle{display:inline-flex;gap:0;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,0.1);margin-bottom:16px}
+.lang-toggle button{padding:6px 14px;border:none;background:transparent;font-size:12px;font-weight:600;cursor:pointer;color:var(--text-tertiary);transition:all 0.2s;font-family:inherit}
+.lang-toggle button.active{background:var(--accent);color:#fff}
+.lang-toggle button:hover:not(.active){background:rgba(0,113,227,0.06)}
+.reading-passage-cn{font-size:14px;line-height:2;color:var(--text);margin-bottom:16px;display:none;padding:12px;background:rgba(0,113,227,0.03);border-radius:10px;border-left:3px solid var(--accent)}
+.reading-passage-cn.show{display:block}
+@media(prefers-color-scheme:dark){
+  .lang-toggle{border-color:rgba(255,255,255,0.1)}
+}
 .word-list{display:flex;flex-direction:column;gap:8px}
 .word-item{
   background:rgba(255,255,255,0.5);border-radius:12px;padding:12px 14px;
@@ -912,6 +922,8 @@ window.__READING_DATA__ = {"metadata": {"title": "高中英语词根记忆法 ·
     });
   });
 })();
+// 中文翻译
+window.__READING_CN__ = {"life":"上周日，我和生物课的同学一起参观了植物园。我们的老师是一位充满热情的植物学家，她解释说植物构成了地球上所有生命的基础。\"你看到的每一种动物都依赖植物，\"她指着花丛上飞舞的蝴蝶说。我们看了一部关于光合作用的动画短片——叶子如何将阳光转化为能量。在动物园区域，一位动物学家向我们展示了不同物种如何适应环境。最精彩的是在显微镜下观察原生动物：肉眼看不见的小生物，却充满生机。\"生物学不只是一门学科，\"老师提醒我们，\"它是关于一切生命如何相互连接的故事。\"离开植物园时，我对周围的绿色世界多了一份新的敬意。","writing":"我的祖母是一位传记作家，花了几十年时间撰写人生故事。她的书房堆满了书目卡片，每一张都是通向他人世界的一扇小门。\"好的文学作品不仅需要天赋，\"她曾告诉我，\"它需要耐心——把每个细节都描述清楚，直到读者能看见。\"她给我看了她的自传——一本磨损的皮面笔记本，里面写满了她自己的故事。\"我学会了先把想法口述录下来，\"她解释说，\"再转录到纸上。口语有一种节奏，打字捕捉不到。\"她生动的文字描述让历史活了起来。临终前，她给了我一张纸：一份手写的\"订阅\"——订阅\"每个人的故事都值得被讲述\"这个信念。\"你不需要是学术意义上的有文化，\"她说，\"你只需要用心去看。\"如今每次坐下来写作，我都能听到她的声音：描述、口述、转录。说出真相。","senses":"第一次走进音乐厅时，我十二岁。观众鸦雀无声，指挥举起了指挥棒。随之而来的是一场感官的爆发。音乐家脸上显而易见的激情与充盈整个房间的悦耳之美交相辉映。我从未如此仔细地审视过声音——每一个音符都有重量和颜色。\"这是现场音乐的一个特殊面向，\"父亲轻声说，\"它无法被录音捕捉。\"中场休息时，我设想着有一天自己也能站在那个舞台上。节目单上的导赏说明描述了贝多芬的耳聋：他创作的音乐只能在脑海中听见。这个事实让我震撼——这是他感官想象力的终极体现。离开时，我感到一种奇怪的感觉——不只是快乐，而是对世间隐藏之美的一种深深的敏感。那晚，我决定学小提琴。","movement":"我的祖父是个永远停不下来的人。他的人生遵循一条简单的原则：一切必须向前推进。年轻时作为毕业生，他离开村庄，顺着大河的水流向下游走去，相信它会通向有意义的地方。\"河流不会请求许可才流淌，\"他常说，\"它只是自然发生——而在流淌中，它塑造了山岳。\"他通过一连串渐进的小步骤建立了自己的事业：一家自行车修理铺，然后是一家小工厂，再后来是物流公司。每一道程序都是在试错中学来的。当我问起他最大的成就时，他指的不是他的生意，而是一张孩子们在毕业典礼上的照片。\"那才是唯一重要的通货，\"他说，\"你传递下去的东西。\"去年夏天，我们把他的骨灰撒进了同一条河。河水一如既往，继续向前流动。","create":"建筑是把思想变得有形的艺术。每一座工厂、每一座桥、每一所学校最初都只是一个想法——但把想法变成结构需要更多。我哥哥是一名建筑工程师。上个月，他给我看了一座新图书馆的蓝图。\"结构必须服务于使用它的人，\"他解释道，手指沿着设计线划过。\"结构完整性不容妥协，但美同样不可妥协。\"设计堪称完美：阳光洒过玻璃面板，阅读角藏在角落，中心是花园庭院。\"最难的部分，\"他说，\"不是施工操作本身，而是说服每个参与者相信最终的成果值得付出。\"当图书馆开放时，我看着孩子们冲进大门。这个存在的事实——一个任何人都能免费学习的地方——让我觉得这是创造最纯粹的形式。有人想象了它，有人建造了它，而现在，它在成就他人。","society":"高三那年，我们的公民课举行了一场模拟审判。我被分配去为一个虚构人物辩护，他被指控犯罪。我的对手是学校里最受欢迎的女孩——公诉人——而且准备得令人害怕。\"法律体系靠的不是人气，\"老师在开场前提醒我们。我花了几周时间研究立法，学习民法与刑法的区别，理解正义的真正含义。审判日，我提交证据表明我的当事人是歧视的受害者，而不是民众所认为的罪犯。\"任何地方的不公正都是对所有地方公正的威胁，\"我引用了金博士的话。陪审团审议了二十分钟后做出裁决：无罪。我赢不是因为聪明，而是因为事实站在我这边——也因为法律在正确适用时，保护弱者如同保护强者一样坚定。","mind":"我的心理学教授以一个问题开始了第一堂课：\"什么是认知？\"教室里一片寂静。\"它是你如何知道自己知道的东西，\"她微笑着答道。\"而今天，你们将学会如何让这种'知道'持续下去。\"她告诉我们，再认和回忆不是一回事。再认是看到一张熟悉的脸然后点头。回忆是从记忆深处调出一个名字，没有任何线索。\"精密的头脑不只是存储事实，\"她说，\"它建立连接。\"她给我们看了她的个人笔记本——40年手写观察记录。\"每一个值得注意的想法，都始于这本书里的一条笔记。写作不是记录。写作就是思考。\"那个学期，我明白了智力不是拥有好记性，而是有意识地关注——那种留下印记的关注。到六月，我能背诵100首诗。不是因为我聪明，而是因为我学会了足够在乎，才能记住。","language":"我的姑婆是我们村方言最后一位能流利使用的人。作为一名语言学家，她晚年一直在录音记录一切：民歌、食谱、摇篮曲。\"一门语言不只是词汇，\"她告诉我，\"它是一种观看世界的方式。\"她是双语的，能在方言和普通话之间自如切换，她相信每个孩子都应该是多语的。\"你学的每一个词汇，\"她说，\"都打开一扇新门。\"她喜欢谚语——那些代代相传的压缩智慧包。她最喜欢的一句老话是：\"舌头没有骨头，却能碎人心。\"那时我不懂。现在，在大学读语言学，把她的录音翻译成过去与现在之间的对话，我懂了。口头表达是人类发明的最强大的工具。语言能伤人也能治愈，能分裂也能团结。我的姑婆选择了治愈。她留下的每一条声音录音都是一座桥——从她的世界到我的世界，从一门垂死的语言到一份活着的记忆。","transfer":"1943年，我的曾祖父从上海写了一封信给他在旧金山的弟弟。这封信花了四个月才传到太平洋彼岸，由一艘运送丝绸和茶叶的货船携带。\"我把记忆的职责授予你，\"他用认真的英文写道——那是一门他从借来的字典里自学而成的语言。这封信通过战时的邮政渠道传了过去，每一枚邮票都是一个小小的奇迹。当信终于到达时，他的弟弟颤抖着接过了它。这张便携的纸重量不到一盎司，却承载着一个家庭的全部希望。那封信启动了一连串事件的运转：曾祖父获得了一位美国资助人的引荐，一份签证申请，一趟旅程——跨越那片他曾只能在纸上跨越的海洋。\"一封信，\"我第一次读到它时父亲告诉我，\"是我所知最迷人的魔法。它压缩距离，把爱抽象进墨水里。\"我把那封信装在相框里挂在书桌上方。它提醒我：最微小的沟通行为，可以改变一生。","keep":"当祖母搬进养老院时，我帮她整理了一辈子的物品。她几乎没保留什么：一张照片、一枚婚戒、一本磨旧的最爱小说。\"我们以为用物品就能维持生活，\"她说着递给我一盒旧信。\"但真正让生命持续的是服务。\"她做了45年护士。\"我没有拯救生命，\"她纠正我的赞美，\"我只是照料它们。这有区别。\"她解释说，她感受到的满足不来自手中持有的东西，而来自无数个微小的时刻——当她为痛苦的人在场时。\"关注是最稀有的一种慷慨，\"她说。\"你留不住青春、健康或时间。但你可以维护尊严。你可以端上喜悦。\"三个月后她去世了，手里只握着我的手。那一刻我懂了：值得保留的东西根本不是东西，而是我们彼此守候的方式。"};
 const rootToPassage = {}; // root_key -> passage_id
 
 function loadReadingData() {
@@ -1080,20 +1092,39 @@ function openReadingModal(themeId) {
   }).join('');
   
   var theme = (rd.themes || []).find(function(t) { return t.id === themeId; });
+  var cnText = (window.__READING_CN__ && window.__READING_CN__[themeId]) || '';
   
   document.getElementById('rm-content').innerHTML = 
     '<button class="rm-close" onclick="closeReadingModal()">✕</button>' +
     '<h3 style="font-size:20px;font-weight:800;margin-bottom:6px;letter-spacing:-0.3px">' +
     (theme ? theme.icon : '📖') + ' ' + passage.title + '</h3>' +
-    '<p style="font-size:12px;color:var(--text-tertiary);margin-bottom:20px">' +
+    '<p style="font-size:12px;color:var(--text-tertiary);margin-bottom:12px">' +
     (theme ? theme.title_cn + ' · ' : '') + '词根：' + (passage.roots_covered||[]).join(' · ') + '</p>' +
-    '<div class="reading-passage">' + text + '</div>' +
+    (cnText ? '<div class="lang-toggle"><button class="active" onclick="switchLang(\''+themeId+'\',\'en\',this)">EN</button><button onclick="switchLang(\''+themeId+'\',\'cn\',this)">中文</button></div>' : '') +
+    '<div class="reading-passage" id="rp-en-'+themeId+'">' + text + '</div>' +
+    (cnText ? '<div class="reading-passage-cn" id="rp-cn-'+themeId+'">' + cnText.replace(/\n/g,'<br>') + '</div>' : '') +
     '<div class="reading-words-used">' +
     (passage.words_used||[]).map(function(w) { return '<span class="reading-word-tag">' + w + '</span>'; }).join('') +
     '</div>' +
     '<div class="reading-questions"><h4>📝 阅读理解</h4>' + questionsHTML + '</div>';
   
   document.getElementById('reading-modal').classList.add('show');
+}
+
+// Language toggle for reading modal
+function switchLang(themeId, lang, btn) {
+  var enEl = document.getElementById('rp-en-' + themeId);
+  var cnEl = document.getElementById('rp-cn-' + themeId);
+  var btns = btn.parentElement.querySelectorAll('button');
+  btns.forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  if (lang === 'en') {
+    if (enEl) enEl.style.display = 'block';
+    if (cnEl) cnEl.classList.remove('show');
+  } else {
+    if (enEl) enEl.style.display = 'none';
+    if (cnEl) cnEl.classList.add('show');
+  }
 }
 
 
