@@ -966,17 +966,40 @@ closePanel = function() {
   document.getElementById('reading-content').classList.remove('show');
 };
 
-// 加载阅读数据（同步，数据已内嵌）
+// 加载阅读数据并直接渲染
 (function() {
-  readingData = window.__READING_DATA__;
+  var rd = window.__READING_DATA__;
+  if (!rd || !rd.themes || !rd.themes.length) return;
+  
+  readingData = rd;
   // Build root → passage mapping
-  (readingData.themes || []).forEach(theme => {
-    (theme.roots || []).forEach(root => {
+  rd.themes.forEach(function(theme) {
+    (theme.roots || []).forEach(function(root) {
       rootToPassage[root] = theme.id;
     });
   });
-  // 直接渲染卡片——不依赖vocabData
-  renderReadingCards();
+  
+  // Direct DOM rendering
+  var section = document.getElementById('reading-section');
+  var grid = document.getElementById('reading-grid');
+  if (!section || !grid) return;
+  
+  section.style.display = 'block';
+  
+  var html = rd.themes.map(function(t) {
+    var passage = rd.passages[t.id];
+    var desc = passage ? passage.passage.replace(/<[^>]+>/g,'').substring(0, 60) + '...' : '';
+    var wordCount = passage ? passage.word_count : 0;
+    return '<div class="reading-card" onclick="openReadingModal(\'' + t.id + '\')">' +
+      '<div class="rc-icon">' + t.icon + '</div>' +
+      '<div class="rc-title">' + (passage ? passage.title : t.title_cn) + '</div>' +
+      '<div class="rc-roots">词根：' + (t.roots||[]).join(' · ') + '</div>' +
+      '<div class="rc-desc">' + desc + '</div>' +
+      '<span class="rc-badge">' + wordCount + '词 · ' + t.title_cn + '</span>' +
+      '</div>';
+  }).join('');
+  
+  grid.innerHTML = html;
 })();
 
 // ===== 主页情景阅读卡片 =====
