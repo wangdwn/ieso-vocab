@@ -4,7 +4,9 @@
     "version": "2.0",
     "description": "10篇主题文章，每篇串联2-4个相关词根，8-12个核心词汇在真实场景中自然出现",
     "totalPassages": 10,
-    "generated": "2026-07-04"
+    "generated": "2026-07-04",
+    "status": "archived",
+    "note": "2026-10: UI removed. Immersive reading lives at wangdw.xyz/learn/english-bite/. Do not re-enable without migrating to english-bite."
   },
   "themes": [
     {
