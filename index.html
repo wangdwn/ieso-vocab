@@ -375,6 +375,14 @@ footer a{color:var(--accent);text-decoration:none;}
   color: #ff453a;
   background: rgba(255,69,58,0.1);
 }
+
+/* hub banner */
+.hub-banner{max-width:980px;margin:12px auto 0;padding:0 20px}
+.hub-banner a{display:block;padding:12px 16px;border-radius:12px;background:rgba(0,113,227,0.08);border:1px solid rgba(0,113,227,0.18);font-size:13px;line-height:1.55;color:var(--text-secondary);text-decoration:none}
+.hub-banner a b{color:var(--accent)}
+@media (prefers-color-scheme: dark){
+  .hub-banner a{background:rgba(100,181,255,0.1);border-color:rgba(100,181,255,0.2)}
+}
 </style>
 </head>
 <body>
@@ -399,6 +407,11 @@ footer a{color:var(--accent);text-decoration:none;}
       <div class="stat"><div class="num" id="word-count-num">0</div><div class="label">词汇</div></div>
       <div class="stat"><div class="num" id="updated-date" style="font-size:18px;letter-spacing:-0.3px">—</div><div class="label">更新</div></div>
     </div>
+  </div>
+
+
+  <div class="hub-banner">
+    <a href="https://wangdw.xyz/learn/gaokao/english.html"><b>高考英语馆</b> · 本页是「词根馆」。碎片精读（5–8 分钟沉浸短篇）已与词根收成同一入口。</a>
   </div>
 
   <div class="search-box">
@@ -1133,5 +1146,30 @@ document.addEventListener('keydown', e => {
   if(e.ctrlKey && e.key === 'k') { e.preventDefault(); document.getElementById('search-input').focus(); }
 });
 </script>
+
+<script>
+(function(){
+  function openFromHash(){
+    var h = (location.hash||'').replace(/^#/, '');
+    if (!h) return;
+    var root = null;
+    if (h.indexOf('root=') === 0) root = decodeURIComponent(h.slice(5));
+    else if (h.indexOf('root/') === 0) root = decodeURIComponent(h.slice(5));
+    if (!root) return;
+    var tryOpen = function(n){
+      if (typeof showRoot === 'function' && window.vocabData && vocabData.roots && vocabData.roots[root]) {
+        showRoot(root);
+        return;
+      }
+      if (n < 40) setTimeout(function(){ tryOpen(n+1); }, 100);
+    };
+    tryOpen(0);
+  }
+  window.addEventListener('hashchange', openFromHash);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', openFromHash);
+  else openFromHash();
+})();
+</script>
+
 </body>
 </html>
